@@ -1,0 +1,8 @@
+owner = LSK
+controller = LSK
+add_core = CAL
+add_core = LSK
+add_core = MEX
+trade_goods = grain
+life_rating = 35
+colonial = 2

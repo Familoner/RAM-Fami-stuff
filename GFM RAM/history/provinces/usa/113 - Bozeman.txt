@@ -1,0 +1,8 @@
+owner = CRW
+controller = CRW
+add_core = BLK
+add_core = CRW
+add_core = USA
+trade_goods = cattle
+life_rating = 35
+terrain = steppe

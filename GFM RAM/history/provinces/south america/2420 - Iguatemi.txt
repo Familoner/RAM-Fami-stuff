@@ -1,0 +1,6 @@
+add_core = MGO
+add_core = PRG
+add_core = BRZ
+trade_goods = grain
+terrain = new_world_plains
+life_rating = 5

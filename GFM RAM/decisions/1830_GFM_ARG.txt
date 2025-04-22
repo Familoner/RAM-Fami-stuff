@@ -1,0 +1,43 @@
+political_decisions = {
+    desert_campaign_malones = {
+        picture = desert_campaign_malones
+        potential = {
+			has_country_modifier = malones
+			OR = {
+                tag = ARC
+                tag = ARG
+                tag = LPL
+            }
+        }
+
+        allow = {
+			war = no
+			year = 1833
+        }
+
+        effect = {
+			ARC = { remove_country_modifier = malones }
+			ARG = { remove_country_modifier = malones }
+			LPL = { remove_country_modifier = malones }
+			2352 = {
+				owner = { country_event = 18482591 }
+			}
+			2352 = {
+				secede_province = THIS
+				add_core = THIS
+				add_core = SBA
+				life_rating = 15
+			}
+			2350 = {
+				owner = { country_event = 18482591 }
+			}
+			2350 = {
+				secede_province = THIS
+				add_core = THIS
+				add_core = SBA
+				life_rating = 15
+			}
+		}
+        ai_will_do = { factor = 1 }
+	}
+}
