@@ -1,0 +1,2427 @@
+political_decisions = {
+
+    greater_norway = {
+        picture = iceland_map
+        potential = {
+		    OR = {
+                tag = NOR
+				tag = SCA
+				tag = DNN
+			}
+			OR = {
+				ai = no
+				government = fascist_dictatorship
+			}
+            NOT = { has_country_flag = greater_norway }
+        }
+
+        allow = {
+            nationalism_n_imperialism = 1
+			OR = {
+                war_policy = jingoism
+			    war_policy = pro_military
+		    }
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            set_country_flag = greater_norway
+            251 = { add_core = THIS }
+            ICL = { all_core = { add_core = THIS } }
+            253 = { add_core = THIS }
+            982 = { add_core = THIS }
+            983 = { add_core = THIS }
+            2587 = { add_core = THIS }
+            3338 = { add_core = THIS }
+            3339 = { add_core = THIS }
+            319 = { add_core = THIS }
+            1724 = { add_core = THIS }
+            3479 = { add_core = THIS }
+            304 = { add_core = THIS }
+            329 = { add_core = THIS }
+            3477 = { add_core = THIS }
+            badboy = 7
+            prestige = 10
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    greater_finland = {
+        picture = greater_finland
+        potential = {
+            tag = FIN
+            NOT = { 994 = { is_core = FIN } }
+            NOT = { has_country_flag = greater_finland }
+        }
+
+        allow = {
+            nationalism_n_imperialism = 1
+			NOT = {
+				war_policy = anti_military
+				war_policy = pacifism
+			}
+            OR = {
+                owns = 994
+                rank = 16
+            }
+            war = no
+            is_vassal = no
+			is_disarmed = no
+			NOT = { has_country_modifier = recently_lost_war }
+            NOT = { government = hms_government }
+            NOT = { government = democracy }
+            NOT = { government = constitutional_empire }
+        }
+
+        effect = {
+            RUS_994 = { add_core = FIN }
+            RUS_339 = { add_core = FIN }
+            RUS_349 = { add_core = FIN }
+            EST = { all_core = { add_core = FIN } }
+            prestige = 10
+            badboy = 10
+            set_country_flag = greater_finland
+            any_country = {
+                limit = {
+                    is_greater_power = no
+                    is_vassal = no
+                    relation = {
+                        who = FIN
+                        value = 5
+                    }
+                    NOT = {
+                        tag = FIN
+                        truce_with = FIN
+                        war_with = FIN
+                    }
+                    OR = {
+                        primary_culture = finnish
+                        primary_culture = sami
+                        primary_culture = estonian
+                    }
+                }
+                country_event = 11109
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+
+    greater_afghanistan = {
+        picture = form_durrani_empire
+        potential = {
+            tag = AFG
+			owns = 1209
+            prestige = 5
+            is_vassal = no
+            NOT = { has_country_flag = greater_afghanistan }
+        }
+        allow = {
+            war = no
+			state_n_government = 1
+			owns = 1219 #Quetta
+            owns = 1218 #Peshawar
+            owns = 2519 #Maymana
+            owns = 1211 #Balkh
+            owns = 1209 #Kabul
+            owns = 1215 #Kandahar
+			owns = 1212 #Herat
+            OR = {
+                prestige = 45
+                rank = 16
+            }
+            prestige = 40
+            is_vassal = no
+        }
+        effect = {
+            1218 = {
+                add_core = AFG
+            }
+            1219 = {
+                add_core = AFG
+            }
+            1223 = {
+                add_core = AFG
+            }
+            set_country_flag = greater_afghanistan
+            badboy = 8
+			#First making sure the core territory is all correct
+			AFG_1209 = { add_core = AFG } #West Pashtunistan
+			AFG_1218 = { add_core = AFG } #Hazaristan
+			AFG_1213 = { add_core = AFG } #East Pashtunistan
+			AFG_1215 = { add_core = AFG } #Sistan
+			AFG_1212 = { add_core = AFG } #Herat
+			AFG_1214 = { add_core = AFG } #Kunduz
+			
+			#Baluchistan
+			KAL_1221 = { add_core = AFG } #Baluchistan proper
+			1146 = { add_core = AFG } #Baluchistan in Iran
+			1144 = { add_core = AFG } #Baluchistan in Iran
+			1145 = { add_core = AFG } #Baluchistan in Iran
+			3512 = { add_core = AFG } #Baluchistan in Iran
+			3496 = { add_core = AFG } #Jiroft
+			1143 = { add_core = AFG } #Bam
+			
+			#Kashmir
+			3525 = { add_core = AFG } #Gilgit
+			3323 = { add_core = AFG } #Karimabad
+			1225 = { add_core = AFG } #Skardu
+			
+			#Persian border provinces
+			3514 = { add_core = AFG } #Panjdeh
+			1147 = { add_core = AFG } #Mashhad
+			3350 = { add_core = AFG } #Qa'in
+			1148 = { add_core = AFG } #Birjand
+			
+			#Tajikistan
+			TAJ_1208 = { add_core = AFG } #Khatlon
+			3520 = { add_core = AFG } #Gharm
+			
+			#I think they also tried to recapture Merv
+			3498 = { add_core = AFG } #Abivard
+			686 = { add_core = AFG } #Merv
+			3785 = { add_core = AFG } #Udarnik
+			
+			#Looks good lol
+			KHI_1200 = { add_core = AFG } #Qarshi
+            
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                1218 = {
+                    owner = {
+                        is_greater_power = yes
+                        military_score = 60
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                1219 = {
+                    owner = {
+                        is_greater_power = yes
+                        military_score = 60
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                1223 = {
+                    owner = {
+                        is_greater_power = yes
+                        military_score = 60
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                badboy = 0.8
+            }
+        }
+    }
+
+    greater_nepal = {
+        picture = greater_nepal
+        potential = {
+            tag = NEP
+            NOT = { has_country_flag = claimed_greater_nepal }
+        }
+
+        allow = {
+            government = fascist_dictatorship
+            OR = {
+                NOT = { neighbour = ENG }
+                AND = {
+                    war_policy = jingoism
+                    civilized = yes
+                }
+            }
+            military_score = 30
+            war = no
+        }
+
+        effect = {
+            set_country_flag = claimed_greater_nepal
+            1235 = { add_core = NEP }
+            1328 = { add_core = NEP }
+            1252 = { add_core = NEP }
+            1255 = { add_core = NEP }
+            any_country = {
+                limit = {
+                    OR = {
+                        owns = 1235
+                        owns = 1328
+                        owns = 1252
+                        owns = 1255
+                    }
+                }
+                relation = { who = THIS value = -100 }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    greater_serbia = {
+    picture = greater_serbia
+        potential = {
+            tag = SER
+            NOT = { has_country_flag = claimed_greater_serbia }
+        }
+
+        allow = {
+            war_policy = jingoism
+            SER = {
+                all_core = { owned_by = SER }
+            }
+            war = no
+            is_vassal = no
+            is_disarmed = no
+        }
+
+        effect = {
+            set_country_flag = claimed_greater_serbia
+            prestige = 10
+            AUS_777 = { add_core = SER }
+            TUR_788 = { add_core = SER }
+            MON_2582 = { add_core = SER }
+            AUS_780 = { add_core = SER }
+            776 = { add_core = SER }
+            772 = { add_core = SER }
+            774 = { add_core = SER }
+            #Skadar can be claimed by MON_claim_skadar in MON_Flavor.txt
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    reclaim_croatia = {
+        picture = reclaim_croatia
+        potential = {
+			OR = {
+				tag = HUN
+				tag = HUR
+			}
+            771 = {
+                NOT = { is_core = HUN }
+                NOT = { is_core = HUR }
+            }
+            NOT = { has_global_flag = reclaimed_croatia }
+        }
+        allow = {
+            war_policy = jingoism
+            rank = 16
+            is_vassal = no
+            NOT = { government = democracy }
+        }
+        effect = {
+            set_global_flag = reclaimed_croatia
+            prestige = 5
+            AUS_771 = { add_core = HUN add_core = THIS }
+            AUS_777 = { add_core = HUN add_core = THIS }
+            778 = { add_core = HUN add_core = THIS }
+            any_country = {
+                limit = {
+                    any_owned_province = { region = AUS_771 }
+                    NOT = { tag = THIS }
+                }
+                relation = { who = THIS value = -50 }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    greater_macedonia = {
+        picture = greater_macedonia
+        potential = {
+            tag = MCD
+            NOT = { has_country_flag = claimed_greater_macedonia }
+        }
+
+        allow = {
+            war_policy = jingoism
+            government = fascist_dictatorship
+            rank = 16
+            war = no
+            is_vassal = no
+            is_disarmed = no
+        }
+
+        effect = {
+            set_country_flag = claimed_greater_macedonia
+            prestige = 5
+            815 = { add_core = MCD }
+            829 = { add_core = MCD }
+            3304 = { add_core = MCD }
+            828 = { add_core = MCD }
+            829 = { add_core = MCD }
+            3470 = { add_core = MCD }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    greater_ukraine = {
+        potential = {
+			OR = {
+				tag = UKR
+				tag = PLR
+                has_country_flag = i_am_slu
+			}
+            NOT = { has_country_flag = claimed_greater_ukraine }
+        }
+
+        allow = {
+			all_core = { owned_by = THIS }
+            war = no
+            is_vassal = no
+            is_disarmed = no
+			OR = {
+				AND = {
+					war_policy = jingoism
+					rank = 12
+					OR = {
+						government = presidential_dictatorship
+						government = proletarian_dictatorship
+						government = absolute_monarchy
+						ruling_party_ideology = fascist
+						ruling_party_ideology = radical
+						ruling_party_ideology = communist
+						ruling_party_ideology = reactionary
+					}
+				}
+				AND = {
+					DON = { all_core = { owned_by = THIS } }
+					RUT = { all_core = { owned_by = THIS } }
+					owns = 3422
+					owns = 676
+					owns = 677
+					owns = 663
+					owns = 715
+					owns = 705
+					owns = 977
+					owns = 1018
+					owns = 1016
+					owns = 3938
+					owns = 979
+					owns = 1047
+				}
+			}
+        }
+
+        effect = {
+            set_country_flag = claimed_greater_ukraine
+			add_accepted_culture = cossack
+            prestige = 10
+            DON = { all_core = { add_core = UKR add_core = THIS } }
+            RUT = { all_core = { add_core = UKR add_core = THIS } }
+            3422 = { add_core = UKR add_core = THIS }
+            676 = { add_core = UKR add_core = THIS }
+            677 = { add_core = UKR add_core = THIS }
+            663 = { add_core = UKR add_core = THIS }
+            715 = { add_core = UKR add_core = THIS }
+            705 = { add_core = UKR add_core = THIS }
+            977 = { add_core = UKR add_core = THIS }
+            1018 = { add_core = UKR add_core = THIS }
+            1016 = { add_core = UKR add_core = THIS }
+            3938 = { add_core = UKR add_core = THIS }
+            979 = { add_core = UKR add_core = THIS }
+            1047 = { add_core = UKR add_core = THIS }
+            any_country = {
+                limit = {
+                    NOT = { tag = THIS }
+                    any_owned_province = { is_core = THIS }
+                }
+                relation = { who = THIS value = -100 }
+                leave_alliance = THIS
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    unite_with_ukraine = {
+        picture = greater_ukraine
+        potential = {
+            tag = RUT
+            exists = UKR
+            NOT = { has_country_flag = unite_with_ukraine }
+            NOT = { has_global_flag = sw_set }
+        }
+
+        allow = {
+            OR = {
+                part_of_sphere = no
+                sphere_owner = { is_sphere_leader_of = UKR }
+            }
+            UKR = {
+                war = no
+                neighbour = THIS
+                is_vassal = no
+            }
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            set_country_flag = unite_with_ukraine
+            all_core = {
+                remove_core = RUT
+                add_core = UKR
+            }
+            3372 = { add_core = UKR }
+            663 = { add_core = UKR }
+            704 = { add_core = UKR }
+            705 = { add_core = UKR }
+            random_country = {
+                limit = {
+                    tag = UKR
+                    ai = yes
+                    THIS = { ai = yes }
+                }
+                inherit = THIS
+            }
+            random_country = {
+                limit = {
+                    tag = UKR
+                    ai = yes
+                    THIS = { ai = no }
+                }
+                any_owned = { secede_province = THIS }
+                THIS = {
+                    random_owned = {
+                        limit = { province_id = 958 }
+                        owner = { capital = 958 }
+                    }
+                    change_tag = UKR
+                }
+            }
+            random_country = {
+                limit = {
+                    tag = UKR
+                    ai = no
+                }
+                country_event = 60130
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    greater_assyria = {
+    picture = greater_assyria
+        potential = {
+            tag = ASY
+            NOT = { CLN = { has_country_flag = claimed_greater_assyria } }
+        }
+
+        allow = {
+            OR = {
+                is_vassal = no
+                ai = no
+            }
+            war_policy = jingoism
+            OR = {
+                owns = 890
+                owns = 928
+                government = fascist_dictatorship
+                rank = 16
+            }
+            war = no
+            is_disarmed = no
+        }
+
+        effect = {
+            CLN = { set_country_flag = claimed_greater_assyria }
+            prestige = 5
+            923 = {
+                change_province_name = "Nineveh"
+            }
+            890 = { add_core = ASY }
+            891 = { add_core = ASY }
+            892 = { add_core = ASY }
+            893 = { add_core = ASY }
+            2414 = { add_core = ASY }
+            925 = { add_core = ASY }
+            928 = { add_core = ASY }
+            1110 = { add_core = ASY }
+            899 = { add_core = ASY }
+            3353 = { add_core = ASY }
+			3348 = { add_core = ASY }
+			1109 = { add_core = ASY }
+			3352 = { add_core = ASY }
+			927 = { add_core = ASY }
+			3300 = { add_core = ASY }
+			3428 = { add_core = ASY }
+			3389 = { add_core = ASY }
+			3530 = { add_core = ASY }
+			3536 = { add_core = ASY }
+			3537 = { add_core = ASY }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    reclaim_palestine = {
+        picture = form_the_ikhwan
+        potential = {
+            tag = PLS
+            has_country_flag = israel_received_cores
+            NOT = { has_country_flag = palestine_reclaimed_cores }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            set_country_flag = palestine_reclaimed_cores
+            EGY_921 = { add_core = PLS }
+        }
+    }
+
+    provincia_cisplatina = {
+        picture = banda_oriental
+        potential = {
+            OR = {
+                tag = BRZ
+                tag = UPB
+            }
+            NOT = { has_country_flag = cisplatina_is_ours }
+        }
+
+        allow = {
+			OR = {
+				AND = {
+					nationalism_n_imperialism = 1
+					OR = {
+						war_policy = jingoism
+						war_policy = pro_military
+					}
+					rank = 12
+					war_policy = jingoism
+					war = no
+					NOT = { has_country_flag = recently_lost_war }
+					NOT = { 2344 = { owner = { relation = { who = THIS value = 100 } } } }
+				}
+				URU = { all_core = { owned_by = THIS } }
+			}
+        }
+
+        effect = {
+            set_country_flag = cisplatina_is_ours #Uruguay provinces
+            badboy = 5
+            URU_2344 = {
+                add_core = THIS
+				add_core = BRZ
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+			modifier = {
+				factor = 0
+				NOT = { 2346 = { is_core = THIS } }
+			}
+        }
+    }
+
+    rio_da_prata = {
+        picture = parana_river
+        potential = {
+            OR = {
+                tag = BRZ
+                tag = UPB
+            }
+            NOT = { has_country_flag = prata_is_ours }
+        }
+
+        allow = {
+            has_country_flag = cisplatina_is_ours
+			owns = 2344 #Montevideo
+            revolution_n_counterrevolution = 1
+            OR = {
+                war_policy = jingoism
+                war_policy = pro_military
+            }
+            rank = 10
+            NOT = { 2359 = { owner = { relation = { who = THIS value = 100 } } } }
+            NOT = { has_country_flag = recently_lost_war }
+        }
+
+        effect = {
+            set_country_flag = prata_is_ours
+            badboy = 10
+			2462 = { add_core = BRZ add_core = THIS }
+            ARG_2360 = {
+                add_core = BRZ add_core = THIS
+            }
+            PRG_2343 = {
+                add_core = BRZ add_core = THIS
+            }
+            2420 = { add_core = BRZ add_core = THIS }
+            4115 = { add_core = BRZ add_core = THIS }
+            2416 = { add_core = BRZ add_core = THIS }
+            4183 = { add_core = BRZ add_core = THIS }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    greater_syria = {
+        picture = greater_syria
+        potential = {
+            tag = SYR
+            NOT = { has_country_flag = claimed_greater_syria }
+        }
+
+        allow = {
+            nationalism_n_imperialism = 1
+			civilized = yes
+			war_policy = jingoism
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            badboy = 10
+            set_country_flag = claimed_greater_syria
+            1756 = { add_core = SYR }
+            1757 = { add_core = SYR }
+            922 = { add_core = SYR }
+            1131 = { add_core = SYR }
+			3351 = { add_core = SYR }
+			3389 = { add_core = SYR }
+            1132 = { add_core = SYR }
+            3351 = { add_core = SYR }
+            EGY_921 = { add_core = SYR }
+            908 = { add_core = SYR }
+			909 = { add_core = SYR }
+            EGY_915 = { add_core = SYR }
+            TUR_855 = { add_core = SYR }
+			EGY_897 = { add_core = SYR }
+            TUR_894 = { add_core = SYR }
+            TUR_923 = { add_core = SYR }
+            TUR_931 = { add_core = SYR }
+            TUR_935 = { add_core = SYR }
+            TUR_893 = { add_core = SYR }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+
+    greater_croatia = {
+        picture = greater_croatia_map
+        potential = {
+            tag = CRO
+            NOT = { has_country_flag = claimed_greater_croatia }
+        }
+
+        allow = {
+            nationalism_n_imperialism = 1
+            romanticism = 1
+            invention = manifest_destiny_invention
+            war_policy = jingoism
+			rank = 16
+			OR = {
+				government = presidential_dictatorship
+				government = proletarian_dictatorship
+				government = absolute_monarchy
+				ruling_party_ideology = fascist
+				ruling_party_ideology = radical
+				ruling_party_ideology = communist
+				ruling_party_ideology = reactionary
+			}
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            badboy = 10
+            set_country_flag = claimed_greater_croatia
+            791 = { add_core = CRO }
+			2577 = { add_core = CRO }
+			804 = { add_core = CRO }
+			2538 = { add_core = CRO }
+			3330 = { add_core = CRO }
+			3672 = { add_core = CRO }
+			640 = { add_core = CRO }
+            TUR_788 = { add_core = CRO }
+			add_accepted_culture = bosniak
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    greater_tibet = {
+        picture = tibet_capital
+        potential = {
+            tag = TIB
+            NOT = { has_country_flag = claimed_greater_tibet }
+        }
+
+        allow = {
+			prestige = 25
+            romanticism = 1
+            war_policy = jingoism
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            badboy = 2
+            set_country_flag = claimed_greater_tibet
+			1488 = { add_core = TIB }
+			1490 = { add_core = TIB }
+			3322 = { add_core = TIB }
+            1593 = { add_core = TIB }
+			1594 = { add_core = TIB }
+			1598 = { add_core = TIB }
+            1586 = { add_core = TIB }
+            1582 = { add_core = TIB }
+            4159 = { add_core = TIB }
+            4160 = { add_core = TIB }
+            4161 = { add_core = TIB }
+            4162 = { add_core = TIB }
+            4163 = { add_core = TIB }
+            1556 = { add_core = TIB }
+            1558 = { add_core = TIB }
+            4165 = { add_core = TIB }
+            4158 = { add_core = TIB }
+            1557 = { add_core = TIB }
+            1591 = { add_core = TIB }
+			1597 = { add_core = TIB }
+			1208 = { add_core = TIB }
+			1225 = { add_core = TIB }
+            1226 = { add_core = TIB }
+			3527 = { add_core = TIB }
+			3525 = { add_core = TIB }
+			3323 = { add_core = TIB }
+			3915 = { add_core = TIB }
+			2607 = { add_core = TIB }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    establish_banatia = {
+        picture = banatia_map
+        potential = {
+            tag = BAN
+            2538 = { NOT = { is_core = BAN } }
+        }
+
+        allow = {
+            prestige = 30
+            OR = {
+                war_policy = jingoism
+                war_policy = pro_military
+            }
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            badboy = 3
+            2538 = { add_core = BAN }
+            791 = { add_core = BAN }
+            3330 = { add_core = BAN }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    claim_transnitria = {
+        picture = transnistria_stamp
+        potential = {
+			676 = { is_core = THIS }
+            OR = {
+                tag = ROM
+                tag = BGR
+				tag = HUR
+				tag = BFR
+            }
+            NOT = { has_country_flag = claimed_transnitria }
+        }
+
+        allow = {
+			war_policy = jingoism
+            nationalism_n_imperialism = 1
+            MOL_676 = { owned_by = THIS }
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            set_country_flag = claimed_transnitria
+            random_list = {
+                34 = { badboy = 3 }
+                33 = { badboy = 4 }
+                33 = { badboy = 5 }
+            }
+            968 = {
+                add_core = THIS
+            }
+            954 = {
+                add_core = THIS
+            }
+            969 = {
+                add_core = THIS
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    claim_tisza = {
+        picture = romanians_marching
+        potential = {
+            OR = {
+                tag = ROM
+                tag = BGR
+            }
+            NOT = { has_country_flag = claimed_tisza }
+        }
+
+        allow = {
+            owns = 651
+            owns = 647
+            owns = 652
+            owns = 653
+            owns = 664
+            nationalism_n_imperialism = 1
+            war_policy = jingoism
+            is_greater_power = yes
+            war = no
+            # any_core = {
+            #     any_neighbor_province = {
+            #         province_id = 792
+            #         any_pop = { has_pop_culture = romanian }
+            #     }
+            # }
+        }
+
+        effect = {
+            set_country_flag = claimed_tisza
+            random_list = {
+                34 = { badboy = 5 }
+                33 = { badboy = 8 }
+                33 = { badboy = 10 }
+            }
+            648 = {
+                add_core = THIS
+            }
+            650 = {
+				add_core = THIS
+            }
+            649 = {
+				add_core = THIS
+            }
+            3331 = {
+				add_core = THIS
+            }
+            792 = {
+				add_core = THIS
+            }
+            795 = {
+				add_core = THIS
+            }
+			3932 = {
+				add_core = THIS
+            }
+            3347 = {
+				add_core = THIS
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    claim_the_caribbean = {
+        picture = claim_the_caribbean
+        potential = {
+            tag = CRB
+            is_vassal = no
+            NOT = { has_country_flag = claimed_the_caribbean }
+        }
+
+        allow = {
+            war_policy = jingoism
+            OR = {  is_greater_power = yes
+					is_secondary_power = yes
+					}
+            war = no
+        }
+
+        effect = {
+            set_country_flag = claimed_the_caribbean
+            badboy = 5
+            HAI_2213 = { add_core = CRB }
+			HAI_2214 = { add_core = CRB }
+            ENG_203 = { add_core = CRB }
+            ENG_2224 = { add_core = CRB }
+            ENG_2228 = { add_core = CRB }
+			SPA_2209 = { add_core = CRB }
+            any_country = {
+                limit = {
+                    any_owned_province = {
+                        OR = {
+                            region = HAI_2213
+							region = HAI_2214
+                            region = ENG_203
+                            region = ENG_2224
+                            region = ENG_2228
+                        }
+                    }
+                }
+                relation = { who = CRB value = -400 }
+                diplomatic_influence = { who = CRB value = -400 }
+                leave_alliance = CRB
+                end_military_access = CRB
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    greater_bulgaria = {
+        picture = greater_bulgaria
+        potential = {
+            OR = {
+                tag = BUL
+                tag = BGR
+                has_country_flag = i_am_slu
+            }
+            NOT = { has_country_flag = greater_bulgaria_claimed }
+        }
+
+        allow = {
+			OR = {
+				rank = 12
+				has_global_flag = you_are_playing_mp
+			}
+            invention = manifest_destiny_invention
+            invention = nostalgic_romanticism
+            war = no
+        }
+
+        effect = {
+            set_country_flag = greater_bulgaria_claimed
+            badboy = 15
+            TUR_805 = { add_core = THIS add_core = BUL }
+            TUR_803 = { add_core = THIS add_core = BUL }
+            TUR_860 = { add_core = THIS add_core = BUL }
+            860 = { remove_core = THIS remove_core = BUL }
+			798 = { add_core = THIS add_core = BUL }
+			3347 = { add_core = THIS add_core = BUL }
+			795 = { add_core = THIS add_core = BUL }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    claim_ulster = {
+        picture = ulster_scot
+        potential = {
+            tag = SCO
+            is_vassal = no
+            NOT = { has_country_flag = ulster_scot }
+        }
+
+        allow = {
+            is_greater_power = yes
+            revolution_n_counterrevolution = 1
+            war_policy = jingoism
+            war = no
+        }
+
+        effect = {
+            set_country_flag = ulster_scot
+            ENG_254 = { add_core = SCO }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    greater_minisrael = {
+		picture = map_arabia
+        potential = {
+            has_global_flag = israel_palestine
+            tag = ISR
+            NOT = { has_country_flag = claimed_greater_minisrael }
+        }
+
+        allow = {
+            nationalism_n_imperialism = 1
+			prestige = 15
+            war_policy = jingoism
+            ISR = {
+                all_core = { owned_by = ISR }
+            }
+            war = no
+            is_vassal = no
+            is_disarmed = no
+			NOT = { has_country_modifier = recently_lost_war }
+        }
+
+        effect = {
+            set_country_flag = claimed_greater_minisrael
+            badboy = 10
+            1756 = { add_core = ISR }
+            1757 = { add_core = ISR }
+            922 = { add_core = ISR }
+            915 = { add_core = ISR }
+			3358 = { add_core = ISR }
+            909 = { add_core = ISR }
+			908 = { add_core = ISR }
+            capital = 917
+            917 = {
+                life_rating = 3
+                add_province_modifier = { name = recently_built_city duration = 1825 }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                badboy = 0.6
+            }
+        }
+    }
+
+    absolute_madman_israel = {
+		picture = map_arabia
+        potential = {
+            tag = ISR
+            has_country_flag = greater_israel
+            all_core = { OR = { owned_by = THIS empty = yes } }
+            NOT = { has_country_flag = absolute_madman_israel }
+        }
+
+        allow = {
+            prestige = 50
+            war_policy = jingoism
+            ISR = {
+                all_core = { owned_by = ISR }
+            }
+            war = no
+            is_vassal = no
+            is_disarmed = no
+			NOT = { has_country_modifier = recently_lost_war }
+			OR = {
+				government = fascist_dictatorship
+				is_greater_power = yes
+			}
+            military_score = 20
+        }
+
+        effect = {
+            set_country_flag = absolute_madman_israel
+            badboy = 25
+            EGY_1762 = { add_core = ISR }
+            EGY_1771 = { add_core = ISR }
+            EGY_1745 = { add_core = ISR }
+            EGY_1755 = { add_core = ISR }
+            1751 = { add_core = ISR }
+			1746 = { add_core = ISR }
+            1746 = { add_core = ISR }
+            1751 = { add_core = ISR }
+            1153 = { add_core = ISR }
+            1154 = { add_core = ISR }
+            1152 = { add_core = ISR }
+			1156 = { add_core = ISR }
+            1158 = { add_core = ISR }
+            3690 = { add_core = ISR }
+            1160 = { add_core = ISR }
+			3404 = { add_core = ISR }
+			3689 = { add_core = ISR }
+            900 = { add_core = ISR }
+            905 = { add_core = ISR }
+            897 = { add_core = ISR }
+            3362 = { add_core = ISR }
+            929 = { add_core = ISR }
+            934 = { add_core = ISR }
+            898 = { add_core = ISR }
+			899 = { add_core = ISR }
+			3279 = { add_core = ISR }
+			3428 = { add_core = ISR }
+			3405 = { add_core = ISR }
+			3300 = { add_core = ISR }
+			901 = { add_core = ISR }
+			3325 = { add_core = ISR }
+			3532 = { add_core = ISR }
+			923 = { add_core = ISR }
+			927 = { add_core = ISR }
+            3292 = { add_core = ISR }
+			926 = { add_core = ISR }
+            932 = { add_core = ISR }
+            933 = { add_core = ISR }
+            935 = { add_core = ISR }
+            3406 = { add_core = ISR }
+			3407 = { add_core = ISR }
+			1132 = { add_core = ISR }
+			3389 = { add_core = ISR }
+            3278 = { add_core = ISR }
+			907 = { add_core = ISR }
+			910 = { add_core = ISR }
+			911 = { add_core = ISR }
+			930 = { add_core = ISR }
+			931 = { add_core = ISR }
+			2639 = { add_core = ISR }
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                badboy = 0.1
+            }
+        }
+    }
+
+	add_lithuania_baltic_states = {
+		picture = old_vilnius
+		potential = {
+			exists = UBD
+			OR = {
+				tag = UBD
+				is_our_vassal = UBD
+			}
+			NOT = {
+				exists = EST
+				exists = LAT
+				has_global_flag = lithuania_in_the_UBD
+				tag = RUS
+			}
+		}
+		
+		allow = {
+			war = no
+			nationalism_n_imperialism = 1
+			is_vassal = no
+			361 = {
+				OR = {
+					owned_by = THIS
+					owner = { vassal_of = THIS }
+				}
+			}
+		}
+		
+		effect = {
+			badboy = 8
+			
+			set_global_flag = lithuania_in_the_UBD
+			
+			UBD = { add_accepted_culture = lithuanian }
+			
+			random_country = {
+				limit = {
+					tag = LIT
+					exists = yes
+					ai = yes
+					war = no
+					vassal_of = THIS
+				}
+				annex_to = UBD
+			}
+			
+			any_country = {
+				limit = {
+					NOT = { tag = UBD }
+					any_owned_province = { is_core = LIT }
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+					war = no
+				}
+				any_owned = { limit = { is_core = LIT } secede_province = THIS }
+			}
+			
+			any_owned = { limit = { is_core = LIT NOT = { is_core = THIS } } secede_province = UBD }
+			
+			LIT = { all_core = { limit = { NOT = { is_core = THIS } } add_core = UBD } }
+			
+			diplomatic_influence = { who = UBD value = 50 }
+			relation = { who = UBD value = 50 }
+			UBD = { any_pop = { limit = { has_pop_culture = lithuanian }  consciousness = 4 militancy = 5 } }
+			UBD = { any_owned = { limit = { is_core = LIT } add_province_modifier = { name = nationalist_agitation duration = 1095 } } }
+		}
+		
+		ai_will_do = { factor = 0 }
+	}
+	
+	annex_united_baltic_duchy = {
+        picture = annex_united_baltic_duchy
+        potential = {
+            OR = {
+                tag = GCF
+                tag = GER
+            }
+            is_greater_power = yes
+            has_country_flag = monarchy_government
+			OR = {
+				357 = { owner = { in_sphere = THIS vassal_of = THIS } }
+				354 = { owner = { in_sphere = THIS vassal_of = THIS } }
+				349 = { owner = { in_sphere = THIS vassal_of = THIS } }
+				owns = 357
+				owns = 354
+				owns = 349
+			}
+            NOT = { has_global_flag = annex_baltic_duchy }
+        }
+
+        allow = {
+			OR = {
+				EST = { all_core = { owner = { in_sphere = THIS vassal_of = THIS } } }
+				EST = { all_core = { owned_by = THIS } }
+			}
+			OR = {
+				LAT = { all_core = { owner = { in_sphere = THIS vassal_of = THIS } } }
+				LAT = { all_core = { owned_by = THIS } }
+			}
+            nationalism_n_imperialism = 1
+			invention = manifest_destiny_invention
+            war = no
+			is_vassal = no
+			is_disarmed = no
+            NOT = { has_country_modifier = recently_lost_war }
+            war_policy = jingoism
+        }
+
+        effect = {
+            badboy = 12
+            set_global_flag = annex_baltic_duchy
+            relation = { who = RUS value = -50 }
+			
+			random_country = {
+				limit = {
+					OR = { tag = UBD tag = EST tag = LAT }
+					exists = yes
+					ai = yes
+					war = no
+					vassal_of = THIS
+				}
+				annex_to = THIS
+			}
+			
+			any_country = {
+				limit = {
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+					war = no
+				}
+				any_owned = { limit = { OR = { is_core = UBD is_core = EST is_core = LAT } } secede_province = THIS }
+			}
+			
+			any_pop = {
+				limit = { 
+					location = { OR = { is_core = UBD is_core = EST is_core = LAT is_core = LIT } }
+					OR = { is_culture_group = baltic is_culture_group = finnougric }
+				}
+				consciousness = 10
+				militancy = 10
+			}
+			any_owned = { limit = { OR = { is_core = UBD is_core = EST is_core = LAT is_core = LIT } } add_province_modifier = { name = nationalist_agitation duration = 1095 } }
+            any_owned = {
+                limit = { OR = { is_core = UBD is_core = EST is_core = LAT is_core = LIT } }
+                add_core = THIS
+                add_province_modifier = {
+                    name = immigration_boom_baltic
+                    duration = 1825
+                }
+                add_province_modifier = {
+                    name = drang_nach_osten
+                    duration = -1
+                }
+            }
+            any_pop = {
+                limit = {
+                    location = { OR = { is_core = UBD is_core = EST is_core = LAT is_core = LIT } }
+                    is_culture_group = germanic
+                }
+                reduce_pop = 1.1
+            }
+        }
+        ai_will_do = { factor = 0 }
+    }
+
+    nor_provoke_swe = {
+        picture = karl_johan
+        potential = {
+            tag = NOR
+			vassal_of = SWE
+            NOT = { has_global_flag = nor_provoke_swe }
+			NOT = { year = 1844 }
+		}
+        allow = {
+			year = 1839
+			OR = {
+			    has_global_flag = den_provoke_swe
+				ai = no
+			}
+            war = no
+            is_disarmed = no
+			NOT = { year = 1844 }
+            NOT = { has_country_modifier = recently_lost_war }
+        }
+
+        effect = {
+		    treasury = -5000
+            consciousness = 3
+            set_global_flag = nor_provoke_swe
+            add_country_modifier = {
+                name = nor_more_military
+                duration = 5478
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    den_provoke_swe = {
+        picture = christian_VIII
+        potential = {
+            tag = DEN
+			is_vassal = no
+            NOT = { has_global_flag = den_provoke_swe }
+			NOT = { has_global_flag = nor_provoke_swe }
+			NOT = { year = 1844 }
+        }
+
+        allow = {
+            war = no
+            is_disarmed = no
+		    year = 1839
+			NOT = { year = 1844 }
+            NOT = { has_country_modifier = recently_lost_war }
+        }
+
+        effect = {
+		    set_global_flag = den_provoke_swe
+        }
+        ai_will_do = {
+			factor = 0.01
+			modifier = {
+				factor = 0
+				NOR = { ai = yes }
+				NOT = { has_global_flag = railroaded_yes_scandinavian_war }
+			}
+			modifier = {
+				factor = 0
+				has_global_flag = railroaded_no_scandinavian_war
+			}
+			modifier = {
+				factor = 20
+				NOR = { ai = no }
+				relation = { who = NOR value = 100 }
+			}
+			modifier = {
+				factor = 1000
+				has_global_flag = railroaded_yes_scandinavian_war
+			}
+		}
+    }
+
+    fin_prepare_war = {
+        picture = suur_suomi
+        potential = {
+            tag = FIN
+            NOT = { has_country_flag = fin_prepare_war }
+        }
+
+        allow = {
+            war = no
+            relation = { who = ENG value = 150 }
+            NOT = { ENG = { relation = { who = RUS value = 50 } } }
+            ENG = { ai = yes }
+        }
+
+        effect = {
+            prestige = 5
+            political_reform = mandatory_service
+            ENG = { treasury = -30000 }
+            FIN = { treasury = 30000 }
+            343 = { fort = 2 }
+            339 = { fort = 2 }
+            4030 = { fort = 2 }
+            343 = { infrastructure = 1 }
+            any_pop = {
+				militancy = -5
+			}
+            set_country_flag = fin_prepare_war
+            ENG = {
+                diplomatic_influence = {
+                    who = FIN
+                    value = 400
+                }
+            }
+        }
+        ai_will_do = { factor = 0.1 }
+    }
+
+    grytviken = {
+        picture = grytviken
+        potential = {
+		    OR = {
+			    tag = NOR
+				tag = SCA
+				has_country_flag = i_am_dnn
+			}
+			2133 = {
+				owned_by = ENG
+			}
+		    NOT = { has_country_flag = grytviken }
+        }
+
+        allow = {
+			naval_logistics = 1
+			rank = 16
+            war = no
+			is_vassal = no
+        }
+
+        effect = {
+            set_country_flag = grytviken
+			2133 = {
+				add_core = THIS
+			}
+			prestige = 5
+			treasury = 10000
+			ENG = { country_event = 131000 }
+        }
+        ai_will_do = { factor = 0.1 }
+    }
+
+    conquer_ireland_nor = {
+        picture = ireland_map
+        potential = {
+			owns = 3479
+		    OR = {
+			    primary_culture = norwegian
+				tag = SCA
+				has_country_flag = i_am_dnn
+			}
+			NOT = { has_global_flag = conquered_ireland_sca has_global_flag = sw_set }
+        }
+
+        allow = {
+			OR = {
+                war_policy = jingoism
+				ruling_party_ideology = fascist
+		    }
+            war = no
+			is_vassal = no
+		    NOT = { has_country_modifier = recently_lost_war }
+        }
+
+        effect = {
+			set_global_flag = conquered_ireland_sca
+            war = {
+                target = ENG
+                attacker_goal = { casus_belli = acquire_any_state state_province_id = 263 }
+                defender_goal = { casus_belli = humiliate_no_infamy }
+            }
+			treasury = -20000
+			political_reform = mandatory_service
+            1724 = { fort = 1 }
+            3477 = { fort = 1 }
+            3479 = { fort = 1 }
+            304 = { fort = 1 }
+			badboy = 5
+        }
+        ai_will_do = { factor = 0.5 }
+    }
+	CZH_claim_corridor = {
+        picture = czech_corridor
+        potential = {
+			OR = { tag = CZH tag = SLV has_country_flag = i_am_slu }
+			NOT = { has_global_flag = CZH_corridor_claimed }
+			NOT = { SLO = { has_country_flag = greater_slovenia_claimed } }
+			NOT = { has_global_flag = great_moravia_larp_enabled }
+        }
+        allow = {
+			owns = 633
+            war = no
+			is_vassal = no
+			is_disarmed = no
+			OR = { AND = { war_policy = pro_military military_score = 60 } war_policy = jingoism }
+			OR = { AND = { rank = 16 prestige = 50 } rank = 8 }
+			OR = { exists = CRO exists = SLO exists = YUG has_country_flag = i_am_slu }
+			NOT = { has_country_modifier = recently_lost_war }
+        }
+        effect = {
+			set_global_flag = CZH_corridor_claimed
+			badboy = 7
+			AUS_624 = { add_core = THIS }
+			639 = { add_core = THIS }
+			3289 = { add_core = THIS }
+			3282 = { add_core = THIS }
+			add_accepted_culture = croat
+        }
+        ai_will_do = { factor = 1 }
+    }
+	YUG_claim_corridor = {
+        picture = czech_corridor
+        potential = {
+			OR = { tag = CRO tag = SLO tag = YUG }
+			NOT = { has_global_flag = CZH_corridor_claimed }
+        }
+        allow = {
+			OR = { owns = 767 owns = 775 }
+            war = no
+			is_vassal = no
+			is_disarmed = no
+			NOT = { has_country_modifier = recently_lost_war }
+			OR = { AND = { war_policy = pro_military military_score = 60 } war_policy = jingoism }
+			OR = { AND = { rank = 16 prestige = 50 } rank = 8 }
+			OR = { exists = SLV exists = CZH }
+        }
+        effect = {
+			set_global_flag = CZH_corridor_claimed
+			badboy = 7
+			AUS_624 = { add_core = THIS }
+			639 = { add_core = THIS }
+			3289 = { add_core = THIS }
+			3282 = { add_core = THIS }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	great_moravia_larp = {
+        picture = great_moravia
+        potential = {
+			OR = { tag = SLV tag = MRV }
+			NOT = { has_global_flag = great_moravia_larp_enabled }
+        }
+        allow = {
+			rank = 16
+            war = no
+			is_vassal = no
+			is_disarmed = no
+			OR = { AND = { war_policy = pro_military military_score = 30 } war_policy = jingoism }
+			OR = { AND = { rank = 16 prestige = 50 } rank = 8 }
+			NOT = { has_country_modifier = recently_lost_war }
+        }
+        effect = {
+			set_global_flag = great_moravia_larp_enabled
+			badboy = 5
+			3335 = { add_core = THIS }
+			631 = { add_core = THIS }
+			632 = { add_core = THIS }
+			688 = { add_core = THIS }
+			3426 = { add_core = THIS }
+			689 = { add_core = THIS }
+			2584 = { add_core = THIS }
+			3277 = { add_core = THIS }
+			AUS_633 = { add_core = THIS }
+        }
+        ai_will_do = { factor = 0 }
+    }
+	great_moravia_larp_stop = {
+        picture = great_moravia
+        potential = {
+			has_global_flag = great_moravia_larp_enabled
+			OR = { tag = SLV tag = MRV }
+			NOT = { has_global_flag = great_moravia_larp_stop }
+        }
+        allow = {
+			rank = 16
+            war = no
+			is_vassal = no
+			is_disarmed = no
+			OR = { AND = { war_policy = pro_military military_score = 60 } war_policy = jingoism }
+			all_core = { owned_by = THIS }
+			OR = { AND = { rank = 16 prestige = 70 } AND = { rank = 8 prestige = 50 } }
+			NOT = { has_country_modifier = recently_lost_war }
+        }
+        effect = {
+			set_global_flag = great_moravia_larp_stop
+			badboy = 20
+			AUS_623 = { add_core = THIS }
+			AUS_624 = { add_core = THIS }
+			AUS_625 = { add_core = THIS }
+			AUS_626 = { add_core = THIS }
+			688 = { add_core = THIS }
+			619 = { add_core = THIS }
+			646 = { add_core = THIS }
+			704 = { add_core = THIS }
+			705 = { add_core = THIS }
+			3285 = { add_core = THIS }
+        }
+        ai_will_do = { factor = 0 }
+    }
+	great_moravia_larp_get_help = {
+        picture = great_moravia
+        potential = {
+			has_global_flag = great_moravia_larp_stop
+			OR = { tag = SLV tag = MRV }
+			NOT = { has_global_flag = great_moravia_get_help }
+        }
+        allow = {
+			rank = 16
+            war = no
+			is_vassal = no
+			is_disarmed = no
+			OR = { AND = { war_policy = pro_military military_score = 90 } war_policy = jingoism }
+			all_core = { owned_by = THIS }
+			OR = { AND = { rank = 16 prestige = 80 } AND = { rank = 8 prestige = 60 } }
+			NOT = { has_country_modifier = recently_lost_war }
+        }
+        effect = {
+			set_global_flag = great_moravia_larp_get_help
+			badboy = 25
+			AUS_702 = { add_core = THIS }
+			PRU_685 = { add_core = THIS }
+			PRU_682 = { add_core = THIS }
+			AUS_641 = { add_core = THIS }
+			AUS_635 = { add_core = THIS }
+			SAX_558 = { add_core = THIS }
+			AUS_652 = { add_core = THIS }
+			AUS_2538 = { add_core = THIS }
+			621 = { add_core = THIS }
+			552 = { add_core = THIS }
+			3417 = { add_core = THIS }
+			687 = { add_core = THIS }
+			651 = { add_core = THIS }
+			647 = { add_core = THIS }
+			3283 = { add_core = THIS }
+			3289 = { add_core = THIS }
+			3282 = { add_core = THIS }
+			3422 = { add_core = THIS }
+        }
+        ai_will_do = { factor = 0 }
+    }
+	big_belarus_letsgo = {
+        picture = poland_lithuania_ruthenia
+        potential = {
+			OR = {
+				tag = BYE
+				AND = {
+					tag = LIT
+					has_country_flag = grand_duchy_lit
+					owns = 718
+				}
+			}
+			NOT = { has_global_flag = greater_belarus_claimed }
+        }
+        allow = {
+			nationalism_n_imperialism = 1
+			OR = { primary_culture = byelorussian accepted_culture = byelorussian }
+            war = no
+			is_vassal = no
+			is_disarmed = no
+			OR = { AND = { war_policy = pro_military military_score = 30 } war_policy = jingoism }
+			OR = { AND = { rank = 16 prestige = 30 } rank = 8 AND = { NOT = { rank = 16 } prestige = 50 } }
+			NOT = { has_country_modifier = recently_lost_war }
+        }
+        effect = {
+			set_global_flag = greater_belarus_claimed
+			badboy = 10
+			360 = { add_core = BYE add_core = THIS }
+			3619 = { add_core = BYE add_core = THIS }
+			356 = { add_core = BYE add_core = THIS }
+			1007 = { add_core = BYE add_core = THIS }
+			943 = { add_core = BYE add_core = THIS }
+			3419 = { add_core = BYE add_core = THIS }
+			1016 = { add_core = BYE add_core = THIS }
+			707 = { add_core = BYE add_core = THIS }
+			1015 = { add_core = BYE add_core = THIS }
+			945 = { add_core = BYE add_core = THIS }
+			3531 = { add_core = BYE add_core = THIS }
+			944 = { add_core = BYE add_core = THIS }
+			949 = { add_core = BYE add_core = THIS }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	reclaim_indian_territory = {
+        picture = organize_indian_territory
+        potential = {
+			tag = INL
+			NOT = { has_country_flag = reclaim_indian_territory }
+        }
+        allow = {
+			is_vassal = no
+			is_disarmed = no
+        }
+        effect = {
+			set_country_flag = reclaim_indian_territory
+			130 = { add_core = INL } #Oklahoma
+			4036 = { add_core = INL } #Oklahoma
+			131 = { add_core = INL } #Oklahoma
+			126 = { add_core = INL } #Kansas
+			4037 = { add_core = INL } #Kansas
+			4065 = { add_core = INL } #Kansas
+			4102 = { add_core = INL } #Kansas
+			127 = { add_core = INL } #Kansas
+			149 = { add_core = INL } #Kansas
+			4043 = { add_core = INL } #Kansas
+			106 = { add_core = INL } #Colorado
+			USA_124 = { add_core = INL } #Nebraska
+			USA_151 = { add_core = INL } #Iowa
+			USA_158 = { add_core = INL } #Minnesota
+			USA_118 = { add_core = INL } #North Dakota
+			USA_121 = { add_core = INL } #South Dakota
+			USA_111 = { add_core = INL } #Wyoming
+			43 = { add_core = INL } #Wyoming
+			4063 = { add_core = INL } #Wyoming
+			107 = { remove_core = INL } #Wyoming
+			110 = { remove_core = INL } #Wyoming
+			4145 = { remove_core = INL } #Wyoming
+			111 = { remove_core = INL } #Wyoming
+			3458 = { remove_core = INL } #Wyoming
+			USA_116 = { add_core = INL } #Montana
+			114 = { remove_core = INL } #Montana
+			3467 = { remove_core = INL } #Montana
+			any_country = {
+				limit = {
+					tag = INL
+				}
+				any_state = {
+					limit = {
+						is_colonial = yes
+						OR = {
+							region = USA_124
+							region = USA_158
+							region = USA_118
+							region = USA_121
+							region = USA_111
+							region = USA_116
+						}
+					}
+					any_owned = {
+						add_core = UTI
+					}
+				}
+				any_owned = {
+					limit = {
+						is_core = UTI
+					}
+					secede_province = THIS
+				}
+				THIS = {
+					any_owned = {
+						limit = {
+							is_core = UTI
+						}
+						secede_province = UTI
+					}
+					create_vassal = UTI
+				}
+				inherit = UTI
+				any_owned = {
+					limit = {
+						is_core = UTI
+					}
+					remove_core = UTI
+				}
+			}
+		}
+        ai_will_do = { factor = 1 }
+    }
+	reclaim_indian_northwest = {
+        picture = tecumseh
+        potential = {
+			tag = INL
+			NOT = { has_global_flag = indian_northwest_reclaimed }
+        }
+        allow = {
+			NOT = { has_country_modifier = recently_lost_war }
+			ideological_thought = 1
+            war = no
+			is_vassal = no
+			is_disarmed = no
+			OR = { war_policy = pro_military war_policy = jingoism }
+        }
+        effect = {
+			set_global_flag = indian_northwest_reclaimed
+			badboy = 5
+			USA_158 = { add_core = INL }
+			USA_162 = { add_core = INL }
+			USA_168 = { add_core = INL }
+			USA_170 = { add_core = INL }
+			USA_176 = { add_core = INL }
+			USA_178 = { add_core = INL }
+			151 = { add_core = INL }
+			4118 = { add_core = INL }
+			4044 = { add_core = INL }
+			4043 = { add_core = INL }
+			123 = { add_core = INL }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	CHE_claim_missouri_arkansas = {
+        picture = caddo
+        potential = {
+			tag = INL
+			NOT = { has_global_flag = CHE_claimed_missouri_arkansas }
+        }
+        allow = {
+			NOT = { has_country_modifier = recently_lost_war }
+			ideological_thought = 1
+            war = no
+			is_vassal = no
+			is_disarmed = no
+			OR = { war_policy = pro_military war_policy = jingoism }
+        }
+        effect = {
+			set_global_flag = CHE_claimed_missouri_arkansas
+			badboy = 3
+			USA_148 = { add_core = INL }
+			USA_144 = { add_core = INL }
+			4063 = { add_core = INL }
+			43 = { add_core = INL }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	CHE_claim_louisiana = {
+        picture = chitimacha
+        potential = {
+			has_global_flag = CHE_claimed_missouri_arkansas
+			tag = CHE
+			NOT = { has_global_flag = CHE_claimed_louie }
+        }
+        allow = {
+			NOT = { has_country_modifier = recently_lost_war }
+			ideological_thought = 1
+            war = no
+			is_vassal = no
+			is_disarmed = no
+			OR = { war_policy = pro_military war_policy = jingoism }
+			owns = 143
+        }
+        effect = {
+			set_global_flag = CHE_claimed_louie
+			badboy = 2
+			USA_139 = { add_core = INL }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	reclaim_indian_reserve = {
+        picture = indian_reserve_map
+        potential = {
+			has_global_flag = indian_northwest_reclaimed
+			has_global_flag = CHE_claimed_missouri_arkansas
+			tag = CHE
+			NOT = { has_global_flag = indian_reserve_reclaimed }
+        }
+        allow = {
+			NOT = { has_country_modifier = recently_lost_war }
+			nationalism_n_imperialism = 1
+			all_core = { OR = { owned_by = THIS empty = yes } }
+            war = no
+			is_vassal = no
+			is_disarmed = no
+			war_policy = jingoism
+        }
+        effect = {
+			set_global_flag = indian_reserve_reclaimed
+			badboy = 20
+			USA_139 = { add_core = INL }
+			USA_194 = { add_core = INL }
+			USA_196 = { add_core = INL }
+			201 = { add_core = INL }
+			USA_188 = { add_core = INL }
+			USA_185 = { add_core = INL }
+			3657 = { add_core = INL }
+			3656 = { add_core = INL }
+			218 = { add_core = INL }
+			227 = { add_core = INL }
+			228 = { add_core = INL }
+			236 = { add_core = INL }
+			237 = { add_core = INL }
+			238 = { add_core = INL }
+			239 = { add_core = INL }
+			240 = { add_core = INL }
+			53 = { add_core = INL }
+			54 = { add_core = INL }
+			52 = { add_core = INL }
+			56 = { add_core = INL }
+			57 = { add_core = INL }
+			55 = { add_core = INL }
+			50 = { add_core = INL }
+			51 = { add_core = INL }
+			46 = { add_core = INL }
+			3616 = { add_core = INL }
+			2627 = { add_core = INL }
+			235 = { add_core = INL }
+			158 = { add_core = INL } #Minnesota
+			4046 = { add_core = INL } #Minnesota
+			198 = { add_core = INL } #Minnesota
+			199 = { add_core = INL } #Minnesota
+			4042 = { add_core = INL } #Minnesota
+			200 = { add_core = INL } #Minnesota
+			4085 = { add_core = INL } #Minnesota
+        }
+        ai_will_do = { factor = 1 }
+    }
+	cherokee_ultimate_insanity = {
+        picture = chitimacha
+        potential = {
+			has_global_flag = indian_reserve_reclaimed
+			tag = CHE
+			NOT = { has_global_flag = cherokee_ultimate_insanity }
+        }
+        allow = {
+			NOT = { has_country_modifier = recently_lost_war }
+			revolution_n_counterrevolution = 1
+			all_core = { OR = { owned_by = THIS empty = yes } }
+            war = no
+			is_vassal = no
+			is_disarmed = no
+			war_policy = jingoism
+        }
+        effect = {
+			set_global_flag = cherokee_ultimate_insanity
+			badboy = 24.99
+			add_accepted_culture = pueblo
+			add_accepted_culture = utian
+			add_accepted_culture = dene
+			add_accepted_culture = muskogean
+			4084 = { add_core = INL }
+			4086 = { add_core = INL }
+			63 = { add_core = INL }
+			4047 = { add_core = INL }
+			3296 = { add_core = INL }
+			3974 = { add_core = INL }
+			5 = { add_core = INL }
+			3983 = { add_core = INL }
+			3463 = { add_core = INL }
+			4144 = { add_core = INL }
+			3601 = { add_core = INL }
+			2631 = { add_core = INL }
+			2599 = { add_core = INL }
+			3 = { add_core = INL }
+			4 = { add_core = INL }
+			2630 = { add_core = INL }
+			6 = { add_core = INL }
+			7 = { add_core = INL }
+			1 = { add_core = INL }
+			2 = { add_core = INL }
+			3597 = { add_core = INL }
+			17 = { add_core = INL }
+			2629 = { add_core = INL }
+			18 = { add_core = INL }
+			2598 = { add_core = INL }
+			11 = { add_core = INL }
+			2597 = { add_core = INL }
+			4096 = { add_core = INL }
+			23 = { add_core = INL }
+			31 = { add_core = INL }
+			32 = { add_core = INL }
+			2596 = { add_core = INL }
+			3297 = { add_core = INL }
+			38 = { add_core = INL }
+			39 = { add_core = INL }
+			4049 = { add_core = INL }
+			4054 = { add_core = INL }
+			154 = { add_core = INL }
+			2595 = { add_core = INL }
+			37 = { add_core = INL }
+			4053 = { add_core = INL }
+			2594 = { add_core = INL }
+			4048 = { add_core = INL }
+			47 = { add_core = INL }
+			48 = { add_core = INL }
+			4045 = { add_core = INL }
+			2593 = { add_core = INL }
+			2592 = { add_core = INL }
+			2626 = { add_core = INL }
+			59 = { add_core = INL }
+			4086 = { add_core = INL }
+			9 = { add_core = INL }
+			76 = { add_core = INL }
+			3612 = { add_core = INL }
+			2625 = { add_core = INL }
+			3485 = { add_core = INL }
+			49 = { add_core = INL }
+			4098 = { add_core = INL }
+			42 = { add_core = INL }
+			40 = { add_core = INL }
+			41 = { add_core = INL }
+			33 = { add_core = INL }
+			4057 = { add_core = INL }
+			34 = { add_core = INL }
+			35 = { add_core = INL }
+			30 = { add_core = INL }
+			27 = { add_core = INL }
+			26 = { add_core = INL }
+			28 = { add_core = INL }
+			25 = { add_core = INL }
+			24 = { add_core = INL }
+			19 = { add_core = INL }
+			16 = { add_core = INL }
+			80 = { add_core = INL }
+			15 = { add_core = INL }
+			368 = { add_core = INL }
+			3599 = { add_core = INL }
+			14 = { add_core = INL }
+			13 = { add_core = INL }
+			4095 = { add_core = INL }
+			20 = { add_core = INL }
+			21 = { add_core = INL }
+			3598 = { add_core = INL }
+			107 = { add_core = INL }
+			109 = { add_core = INL }
+			4120 = { add_core = INL }
+			103 = { add_core = INL }
+			128 = { add_core = INL }
+			105 = { add_core = INL }
+			4034 = { add_core = INL }
+			4035 = { add_core = INL }
+			129 = { add_core = INL }
+			135 = { add_core = INL }
+			3588 = { add_core = INL }
+			4177 = { add_core = INL }
+			136 = { add_core = INL }
+			4031 = { add_core = INL }
+			134 = { add_core = INL }
+			4062 = { add_core = INL }
+			43 = { add_core = INL }
+			4063 = { add_core = INL }
+			133 = { add_core = INL }
+			132 = { add_core = INL }
+			3647 = { add_core = INL }
+			137 = { add_core = INL }
+			138 = { add_core = INL }
+			2150 = { add_core = INL }
+			2151 = { add_core = INL }
+			2149 = { add_core = INL }
+			2155 = { add_core = INL }
+			4061 = { add_core = INL }
+			2152 = { add_core = INL }
+			2147 = { add_core = INL }
+			2145 = { add_core = INL }
+			2141 = { add_core = INL }
+			4059 = { add_core = INL }
+			2144 = { add_core = INL }
+			4060 = { add_core = INL }
+			2143 = { add_core = INL }
+			2142 = { add_core = INL }
+			2137 = { add_core = INL }
+			2140 = { add_core = INL }
+			3456 = { add_core = INL }
+			2138 = { add_core = INL }
+			2139 = { add_core = INL }
+			2662 = { add_core = INL }
+			3589 = { add_core = INL }
+			4032 = { add_core = INL }
+			105 = { add_core = INL }
+			4034 = { add_core = INL }
+			4035 = { add_core = INL }
+			3560 = { add_core = INL }
+			108 = { add_core = INL }
+			4176 = { add_core = INL }
+			110 = { add_core = INL }
+			4145 = { add_core = INL }
+			3468 = { add_core = INL }
+			111 = { add_core = INL }
+			113 = { add_core = INL }
+			3467 = { add_core = INL }
+			114 = { add_core = INL }
+			102 = { add_core = INL }
+			4052 = { add_core = INL }
+			100 = { add_core = INL }
+			101 = { add_core = INL }
+			3460 = { add_core = INL }
+			99 = { add_core = INL }
+			4055 = { add_core = INL }
+			98 = { add_core = INL }
+			3459 = { add_core = INL }
+			97 = { add_core = INL }
+			92 = { add_core = INL }
+			91 = { add_core = INL }
+			93 = { add_core = INL }
+			3457 = { add_core = INL }
+			94 = { add_core = INL }
+			95 = { add_core = INL }
+			3458 = { add_core = INL }
+			96 = { add_core = INL }
+			94 = { add_core = INL }
+			3457 = { add_core = INL }
+			3451 = { add_core = INL }
+			90 = { add_core = INL }
+			88 = { add_core = INL }
+			89 = { add_core = INL }
+			3566 = { add_core = INL }
+			3450 = { add_core = INL }
+			3449 = { add_core = INL }
+			87 = { add_core = INL }
+			3452 = { add_core = INL }
+			3448 = { add_core = INL }
+			104 = { add_core = INL }
+			84 = { add_core = INL }
+			4142 = { add_core = INL }
+			86 = { add_core = INL }
+			85 = { add_core = INL }
+			3340 = { add_core = INL }
+			3455 = { add_core = INL }
+			3453 = { add_core = INL }
+			3454 = { add_core = INL }
+			83 = { add_core = INL }
+			3462 = { add_core = INL }
+			82 = { add_core = INL }
+			4143 = { add_core = INL }
+			3461 = { add_core = INL }
+			81 = { add_core = INL }
+			3466 = { add_core = INL }
+			3465 = { add_core = INL }
+			3464 = { add_core = INL }
+			4050 = { add_core = INL }
+			4051 = { add_core = INL }
+			79 = { add_core = INL }
+			3600 = { add_core = INL }
+			78 = { add_core = INL }
+			2463 = { add_core = INL }
+			2148 = { add_core = INL }
+			4033 = { add_core = INL }
+			3467 = { add_core = INL }
+			3468 = { add_core = INL }
+			109 = { add_core = INL }
+			108 = { add_core = INL }
+			4176 = { add_core = INL }
+			3560 = { add_core = INL }
+        }
+        ai_will_do = { factor = 1 }
+    }
+	#the_final_push_to_the_sea = {
+     #   picture = organize_indian_territory
+      #  potential = {
+		#	tag = INL
+		#	has_global_flag = indian_reserve_reclaimed
+		#	NOT = { has_global_flag = mohicans_at_the_atlantic }
+        #}
+        #allow = {
+		#	NOT = { has_country_modifier = recently_lost_war }
+		#	nationalism_n_imperialism = 1
+		#	invention = manifest_destiny_invention
+		#	biologism = 1
+		#	ruling_party_ideology = fascist
+		#	has_unclaimed_cores = no
+		#	war = no
+		#	is_vassal = no
+		#	is_disarmed = no
+        #}
+        #effect = {
+		#	set_global_flag = mohicans_at_the_atlantic
+		#	badboy = 20
+		#	USA_201 = { add_core = INL }
+		#	USA_205 = { add_core = INL }
+		#	USA_2556 = { add_core = INL }
+		#	USA_211 = { add_core = INL }
+		#	USA_219 = { add_core = INL }
+		#	USA_223 = { add_core = INL }
+		#	USA_231 = { add_core = INL }
+		#	USA_232 = { add_core = INL }
+		#	USA_243 = { add_core = INL }
+		#	USA_247 = { add_core = INL }
+		#	USA_218 = { add_core = INL }
+		#	ENG_68 = { add_core = INL }
+		#	66 = { add_core = INL }
+		#	67 = { add_core = INL }
+        #}
+        #ai_will_do = { factor = 1 }
+    #}
+	miskito_nationalists_spawned = {
+        picture = moskito_coast_reserve
+        potential = {
+			tag = MSK
+			NOT = { has_global_flag = greater_mosquitia_claimed }
+        }
+        allow = {
+			nationalism_n_imperialism = 1
+            war = no
+			is_vassal = no
+			is_disarmed = no
+			war_policy = jingoism
+			NOT = { has_country_modifier = recently_lost_war }
+        }
+        effect = {
+			set_global_flag = greater_mosquitia_claimed
+			badboy = 3
+			2195 = { add_core = MSK }
+			3492 = { add_core = MSK }
+			3491 = { add_core = MSK }
+			2203 = { add_core = MSK }
+			4081 = { add_core = MSK }
+			3564 = { add_core = MSK }
+			3735 = { add_core = MSK }
+			3393 = { add_core = MSK }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+	greater_philippines = {
+        picture = map_philippines
+        potential = {
+		    tag = PHL
+			OR = {
+				ai = no
+				government = fascist_dictatorship
+			}
+            NOT = { has_country_flag = greater_philippines }
+        }
+
+        allow = {
+			OR = {
+				is_greater_power = yes
+				AND = {
+					nationalism_n_imperialism = 1
+					OR = {
+						war_policy = jingoism
+						war_policy = pro_military
+					}
+				}
+			}
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            set_country_flag = greater_philippines
+			1397 = { add_core = THIS }
+            2579 = { add_core = THIS }
+            610 = { add_core = THIS }
+            2517 = { add_core = THIS }
+            2521 = { add_core = THIS }
+            3413 = { add_core = THIS }
+            badboy = 7
+            prestige = 10
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+	PHL_inherit_sulu = {
+        picture = sulu_flag
+        potential = {
+		    tag = PHL
+			OR = {
+				SUL = { vassal_of = THIS }
+				AND = {
+					SUL = { exists = no }
+					1397 = { owned_by = THIS }
+					has_country_flag = greater_philippines
+				}
+			}
+            NOT = { has_country_flag = claimed_sulu }
+        }
+
+        allow = {
+            NOT = { has_country_modifier = recently_lost_war }
+			revolution_n_counterrevolution = 1
+			OR = {
+                war_policy = jingoism
+			    war_policy = pro_military
+		    }
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            set_country_flag = claimed_sulu
+            SUL = { all_core = { add_core = THIS } }
+			THIS = { inherit = SUL }
+			relation = {
+                        who = NET
+                        value = -100
+                    }
+            badboy = 10
+            prestige = 10
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	philippine_micronesia = {
+        picture = micronesia_map
+        potential = {
+		    tag = PHL
+			has_country_flag = greater_philippines
+			owns = 2518
+			owns = 2517
+			owns = 2521
+            NOT = { has_country_flag = philippine_micronesia }
+        }
+
+        allow = {
+			OR = {
+				rank = 16
+				AND = {
+					revolution_n_counterrevolution = 1
+					OR = {
+						war_policy = jingoism
+						war_policy = pro_military
+					}
+				}
+			}
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            set_country_flag = philippine_micronesia
+            2522 = { add_core = THIS }
+            2527 = { add_core = THIS }
+            2523 = { add_core = THIS }
+            2524 = { add_core = THIS }
+            2525 = { add_core = THIS }
+            1654 = { add_core = THIS }
+            3646 = { add_core = THIS }
+            badboy = 15
+            prestige = 15
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	philippine_formosa = {
+        picture = taiwan_map
+        potential = {
+		    tag = PHL
+			has_country_flag = greater_philippines
+			has_country_flag = claimed_sulu
+			has_country_flag = philippine_micronesia
+            NOT = { has_country_flag = philippine_formosa }
+        }
+
+        allow = {
+			NOT = { has_country_modifier = recently_lost_war }
+			mass_politics = 1
+			OR = {
+				TAI = { vassal_of = THIS }
+				AND = {
+					TAI = { exists = no }
+					2681 = { owned_by = THIS }
+				}
+			}
+			war_policy = jingoism
+            war = no
+            is_vassal = no
+        }
+
+        effect = {
+            set_country_flag = philippine_formosa
+            2681 = { add_core = THIS }
+            1485 = { add_core = THIS }
+            2562 = { add_core = THIS }
+            4178 = { add_core = THIS }
+            4179 = { add_core = THIS }
+            3924 = { add_core = THIS }
+            2406 = { add_core = THIS }
+            badboy = 8
+            prestige = 10
+        }
+        ai_will_do = { factor = 1 }
+    }
+}

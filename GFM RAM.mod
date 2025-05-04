@@ -1,8 +1,0 @@
-name = "GFM RAM Test"
-path = "mod/GFM RAM"
-user_dir = "GFM RAM"
-replace_path = "history"
-replace_path = "events"
-replace_path = "decisions"
-replace_path = "gfx"
-replace_path = "tutorial"

@@ -1,0 +1,8 @@
+name = "Random Access Mod"
+path = "mod/RAM"
+user_dir = "RAM"
+replace_path = "history"
+replace_path = "events"
+replace_path = "decisions"
+replace_path = "gfx"
+replace_path = "tutorial"
