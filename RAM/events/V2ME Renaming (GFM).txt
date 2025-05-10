@@ -324,11 +324,11 @@ country_event = {
 		any_land_province = { limit = { province_id = 3787 owner = { is_culture_group = french } } change_province_name = "Richard-Toll" }
 
 		# 1964
-		any_land_province = { limit = { province_id = 1964 owner = { is_culture_group = french } } change_province_name = "Daboulda" }
-		any_land_province = { limit = { province_id = 1964 owner = { OR = { is_culture_group = british is_culture_group = american_cultures } } } change_province_name = "Dabilda" }
-		any_land_province = { limit = { province_id = 1964 owner = { primary_culture = catalan } } change_province_name = "Lavillda" }
-		any_land_province = { limit = { province_id = 1964 owner = { is_culture_group = germanic } } change_province_name = "Däbilda" }
-		any_land_province = { limit = { province_id = 1964 owner = { OR = { primary_culture = hausa primary_culture = kanuri primary_culture = fulbe } } } change_province_name = "Dabilda" }
+		any_land_province = { limit = { province_id = 1964 owner = { is_culture_group = french } } change_province_name = "Daboulda" 3101 = { change_province_name = "Lac Tchad" } }
+		any_land_province = { limit = { province_id = 1964 owner = { OR = { is_culture_group = british is_culture_group = american_cultures } } } change_province_name = "Dabilda" 3101 = { change_province_name = "Lake Chad" } }
+		any_land_province = { limit = { province_id = 1964 owner = { primary_culture = catalan } } change_province_name = "Lavillda" 3101 = { change_province_name = "Llac Txad" } }
+		any_land_province = { limit = { province_id = 1964 owner = { is_culture_group = germanic } } change_province_name = "Däbilda" 3101 = { change_province_name = "Tschadsee" } }
+		any_land_province = { limit = { province_id = 1964 owner = { OR = { primary_culture = hausa primary_culture = kanuri primary_culture = fulbe } } } change_province_name = "Dabilda" 3101 = { change_province_name = "Sádea" } }
 
 		# 3440
 		any_land_province = { limit = { province_id = 3440 owner = { OR = { primary_culture = han_chinese primary_culture = tibetan } } } change_province_name = "Longking" }
@@ -3103,10 +3103,15 @@ country_event = {
 		any_land_province = { limit = { province_id = 1873 owner = { is_culture_group = italian } } change_province_name = "Las Anod" }
 		any_land_province = { limit = { province_id = 1873 owner = { OR = { primary_culture = bedouin primary_culture = mashriqi primary_culture = misri primary_culture = maghrebi primary_culture = maures primary_culture = sudanese } } } change_province_name = "Lasanud" }
 
-		# 3706
-		any_land_province = { limit = { province_id = 3706 owner = { primary_culture = somali } } change_province_name = "Burco" }
-		any_land_province = { limit = { province_id = 3706 owner = { is_culture_group = italian } } change_province_name = "Birao" }
-		any_land_province = { limit = { province_id = 3706 owner = { OR = { primary_culture = bedouin primary_culture = mashriqi primary_culture = misri primary_culture = maghrebi primary_culture = maures primary_culture = sudanese } } } change_province_name = "Bireu" }
+		# 3820
+		any_land_province = { limit = { province_id = 3820 owner = { primary_culture = somali } } change_province_name = "Burco" }
+		any_land_province = { limit = { province_id = 3820 owner = { is_culture_group = italian } } change_province_name = "Birao" }
+		any_land_province = { limit = { province_id = 3820 owner = { OR = { primary_culture = bedouin primary_culture = mashriqi primary_culture = misri primary_culture = maghrebi primary_culture = maures primary_culture = sudanese } } } change_province_name = "Bireu" }
+
+		# 3958
+		any_land_province = { limit = { province_id = 3958 owner = { primary_culture = somali } } change_province_name = "Maydh" }
+		any_land_province = { limit = { province_id = 3958 owner = { is_culture_group = italian } } change_province_name = "Mait" }
+		any_land_province = { limit = { province_id = 3958 owner = { OR = { primary_culture = bedouin primary_culture = mashriqi primary_culture = misri primary_culture = maghrebi primary_culture = maures primary_culture = sudanese } } } change_province_name = "Myt" }
 
 		# 3707
 		any_land_province = { limit = { province_id = 3707 owner = { primary_culture = somali } } change_province_name = "Laasqoray" }
@@ -5473,11 +5478,11 @@ country_event = {
 		any_land_province = { limit = { province_id = 199 owner = { is_culture_group = native_american } } change_province_name = "Wewoka" }
 
 		# 200
-		any_land_province = { limit = { province_id = 200 owner = { OR = { year = 1856 has_global_flag = orlando_happened } OR = { AND = { is_culture_group = latin_american_cultures NOT = { primary_culture = brazilian } } primary_culture = spanish } } } change_province_name = "Orlando" owner = { set_global_flag = orlando_happened } }
-		any_land_province = { limit = { province_id = 200 owner = { OR = { year = 1856 has_global_flag = orlando_happened } OR = { is_culture_group = american_cultures is_culture_group = british primary_culture = anglo_canadian } } } change_province_name = "Orlando" owner = { set_global_flag = orlando_happened } }
-		any_land_province = { limit = { province_id = 200 owner = { NOT = { year = 1856 has_global_flag = orlando_happened } OR = { AND = { is_culture_group = latin_american_cultures NOT = { primary_culture = brazilian } } primary_culture = spanish } } } change_province_name = "Fortín Júpiter" }
-		any_land_province = { limit = { province_id = 200 owner = { NOT = { year = 1856 has_global_flag = orlando_happened } OR = { is_culture_group = american_cultures is_culture_group = british primary_culture = anglo_canadian } } } change_province_name = "Fort Jupiter" }
-		any_land_province = { limit = { province_id = 200 owner = { is_culture_group = native_american } } change_province_name = "Ahapopka" }
+		any_land_province = { limit = { province_id = 200 owner = { OR = { year = 1856 has_global_flag = orlando_happened } OR = { AND = { is_culture_group = latin_american_cultures NOT = { primary_culture = brazilian } } primary_culture = spanish } } } change_province_name = "Orlando" owner = { set_global_flag = orlando_happened } 3542 = { change_province_name = "Laguna de Espiritu Santo" } }
+		any_land_province = { limit = { province_id = 200 owner = { OR = { year = 1856 has_global_flag = orlando_happened } OR = { is_culture_group = american_cultures is_culture_group = british primary_culture = anglo_canadian } } } change_province_name = "Orlando" owner = { set_global_flag = orlando_happened } 3542 = { change_province_name = "Lake Okeechobee" } }
+		any_land_province = { limit = { province_id = 200 owner = { NOT = { year = 1856 has_global_flag = orlando_happened } OR = { AND = { is_culture_group = latin_american_cultures NOT = { primary_culture = brazilian } } primary_culture = spanish } } } change_province_name = "Fortín Júpiter" 3542 = { change_province_name = "Laguna de Espiritu Santo" } }
+		any_land_province = { limit = { province_id = 200 owner = { NOT = { year = 1856 has_global_flag = orlando_happened } OR = { is_culture_group = american_cultures is_culture_group = british primary_culture = anglo_canadian } } } change_province_name = "Fort Jupiter" 3542 = { change_province_name = "Lake Okeechobee" } }
+		any_land_province = { limit = { province_id = 200 owner = { is_culture_group = native_american } } change_province_name = "Ahapopka" 3542 = { change_province_name = "Oki Chobi" } }
 
 		# 4042
 		any_land_province = { limit = { province_id = 4042 owner = { OR = { AND = { is_culture_group = latin_american_cultures NOT = { primary_culture = brazilian } } primary_culture = spanish } } } change_province_name = "Padua" }
@@ -5642,10 +5647,10 @@ country_event = {
 		any_land_province = { limit = { province_id = 671 owner = { is_culture_group = polish_culture_group } } change_province_name = "Botoszany" }
 
 		# 946
-		any_land_province = { limit = { province_id = 946 owner = { primary_culture = russian } } change_province_name = "Lépel" }
-		any_land_province = { limit = { province_id = 946 owner = { primary_culture = byelorussian } } change_province_name = "Liepiel" }
-		any_land_province = { limit = { province_id = 946 owner = { is_culture_group = polish_culture_group } } change_province_name = "Lepel" }
-		any_land_province = { limit = { province_id = 946 owner = { primary_culture = lithuanian } } change_province_name = "Lepelis" }
+		any_land_province = { limit = { province_id = 946 owner = { primary_culture = russian } } change_province_name = "Borisov" }
+		any_land_province = { limit = { province_id = 946 owner = { primary_culture = byelorussian } } change_province_name = "Barysaw" }
+		any_land_province = { limit = { province_id = 946 owner = { is_culture_group = polish_culture_group } } change_province_name = "Borysów" }
+		any_land_province = { limit = { province_id = 946 owner = { primary_culture = lithuanian } } change_province_name = "Barysavas" }
 
 		# 945
 		any_land_province = { limit = { province_id = 945 owner = { primary_culture = russian } } change_province_name = "Vitebsk" }
@@ -5700,10 +5705,10 @@ country_event = {
 		any_land_province = { limit = { province_id = 948 owner = { primary_culture = lithuanian } } change_province_name = "Mogiliavas" }
 
 		# 944
-		any_land_province = { limit = { province_id = 944 owner = { primary_culture = russian } } change_province_name = "Órsha" }
-		any_land_province = { limit = { province_id = 944 owner = { primary_culture = byelorussian } } change_province_name = "Vorša" }
-		any_land_province = { limit = { province_id = 944 owner = { is_culture_group = polish_culture_group } } change_province_name = "Orsza" }
-		any_land_province = { limit = { province_id = 944 owner = { primary_culture = lithuanian } } change_province_name = "Orša" }
+		any_land_province = { limit = { province_id = 944 owner = { primary_culture = russian } } change_province_name = "Cherikov" }
+		any_land_province = { limit = { province_id = 944 owner = { primary_culture = byelorussian } } change_province_name = "Cerykau" }
+		any_land_province = { limit = { province_id = 944 owner = { is_culture_group = polish_culture_group } } change_province_name = "Czeryków" }
+		any_land_province = { limit = { province_id = 944 owner = { primary_culture = lithuanian } } change_province_name = "Cerykavas" }
 
 		# 3284
 		any_land_province = { limit = { province_id = 3284 owner = { OR = { primary_culture = spanish AND = { is_culture_group = latin_american_cultures NOT = { primary_culture = brazilian } } } } } change_province_name = "San Nicolás" }
@@ -5766,10 +5771,10 @@ country_event = {
 		any_land_province = { limit = { province_id = 942 owner = { primary_culture = lithuanian } } change_province_name = "Mozyrius" }
 
 		# 941
-		any_land_province = { limit = { province_id = 941 owner = { primary_culture = russian } } change_province_name = "Slutsk" }
-		any_land_province = { limit = { province_id = 941 owner = { primary_culture = byelorussian } } change_province_name = "Sluck" }
-		any_land_province = { limit = { province_id = 941 owner = { is_culture_group = polish_culture_group } } change_province_name = "Sluck" }
-		any_land_province = { limit = { province_id = 941 owner = { primary_culture = lithuanian } } change_province_name = "Sluckas" }
+		any_land_province = { limit = { province_id = 941 owner = { primary_culture = russian } } change_province_name = "Baranovichi" }
+		any_land_province = { limit = { province_id = 941 owner = { primary_culture = byelorussian } } change_province_name = "Baranavicy" }
+		any_land_province = { limit = { province_id = 941 owner = { is_culture_group = polish_culture_group } } change_province_name = "Baranowicze" }
+		any_land_province = { limit = { province_id = 941 owner = { primary_culture = lithuanian } } change_province_name = "Baranoviciai" }
 
 		# 473
 		any_land_province = { limit = { province_id = 473 owner = { primary_culture = french } } change_province_name = "Corse" }
@@ -7821,14 +7826,14 @@ country_event = {
 		any_land_province = { limit = { province_id = 1107 owner = { primary_culture = azerbaijani } } change_province_name = "Lenkeran" }
 		
 		# 1098
-		any_land_province = { limit = { province_id = 1098 owner = { primary_culture = russian NOT = { year = 1849 } } } change_province_name = "Erivan" state_scope = { change_region_name = "Armeniya" } }
-		any_land_province = { limit = { province_id = 1098 owner = { primary_culture = russian year = 1849 } } change_province_name = "Erivan" state_scope = { change_region_name = "Erivan" } }
-		any_land_province = { limit = { province_id = 1098 owner = { primary_culture = georgian NOT = { tag = TCA is_vassal = yes } } } change_province_name = "Erevani" state_scope = { change_region_name = "Somkheti" } }
-		any_land_province = { limit = { province_id = 1098 owner = { primary_culture = armenian } } change_province_name = "Yereven" state_scope = { change_region_name = "Hayastan" } }
-		any_land_province = { limit = { province_id = 1098 owner = { primary_culture = turkish } } change_province_name = "Ereven" state_scope = { change_region_name = "Dogu Ermenistan" } }
-		any_land_province = { limit = { province_id = 1098 owner = { primary_culture = persian } } change_province_name = "Iravan" state_scope = { change_region_name = "Chokhur-e Sa'd" } }
-		any_land_province = { limit = { province_id = 1098 owner = { NOT = { owns = 3353 } primary_culture = azerbaijani } } change_province_name = "Irevan" state_scope = { change_region_name = "Qerbi Azerbaycan" } }
-		any_land_province = { limit = { province_id = 1098 owner = { owns = 3353 primary_culture = azerbaijani } } change_province_name = "Irevan" state_scope = { change_region_name = "Göyçe-Zengezur" } }
+		any_land_province = { limit = { province_id = 1098 owner = { primary_culture = russian NOT = { year = 1849 } } } change_province_name = "Erivan" state_scope = { change_region_name = "Armeniya" } 3640 = { change_province_name = "Ozero Sevan" } }
+		any_land_province = { limit = { province_id = 1098 owner = { primary_culture = russian year = 1849 } } change_province_name = "Erivan" state_scope = { change_region_name = "Erivan" } 3640 = { change_province_name = "Ozero Sevan" } }
+		any_land_province = { limit = { province_id = 1098 owner = { primary_culture = georgian NOT = { tag = TCA is_vassal = yes } } } change_province_name = "Erevani" state_scope = { change_region_name = "Somkheti" } 3640 = { change_province_name = "Sevanis T'ba" } }
+		any_land_province = { limit = { province_id = 1098 owner = { primary_culture = armenian } } change_province_name = "Yereven" state_scope = { change_region_name = "Hayastan" } 3640 = { change_province_name = "Sevana Lich" } }
+		any_land_province = { limit = { province_id = 1098 owner = { primary_culture = turkish } } change_province_name = "Ereven" state_scope = { change_region_name = "Dogu Ermenistan" } 3640 = { change_province_name = "Sevan Gölü" } }
+		any_land_province = { limit = { province_id = 1098 owner = { primary_culture = persian } } change_province_name = "Iravan" state_scope = { change_region_name = "Chokhur-e Sa'd" } 3640 = { change_province_name = "Daryacheh-ye Savan" } }
+		any_land_province = { limit = { province_id = 1098 owner = { NOT = { owns = 3353 } primary_culture = azerbaijani } } change_province_name = "Irevan" state_scope = { change_region_name = "Qerbi Azerbaycan" } 3640 = { change_province_name = "Goycha Gölü" } }
+		any_land_province = { limit = { province_id = 1098 owner = { owns = 3353 primary_culture = azerbaijani } } change_province_name = "Irevan" state_scope = { change_region_name = "Göyçe-Zengezur" } 3640 = { change_province_name = "Goycha Gölü" } }
 	
 		# 1099
 		any_land_province = { limit = { province_id = 1099 owner = { primary_culture = russian } } change_province_name = "Alexandropol" }

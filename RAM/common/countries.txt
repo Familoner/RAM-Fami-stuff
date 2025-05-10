@@ -7,7 +7,6 @@ REB        = "countries/rebels.txt"
 UTI        = "countries/Utility Tag.txt"
 CLN        = "countries/Cleanup.txt"
 INL        = "countries/Indian Lands.txt"
-UT2        = "countries/Utility Tag 2.txt"
 
 ### NEW NATIONS MOD ###
 
