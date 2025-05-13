@@ -1129,3 +1129,50 @@ country_event = {
         }
     }
 }
+
+#Fami Events
+country_event = {
+    id = 46335
+    title = "EVTNAME46335"
+    desc = "EVTDESC46335"
+    picture = 2nd_anglo_sikh_war
+    
+    trigger = {
+        year = 1860
+        has_global_flag = EIC_independence
+        tag = EIC
+    }
+    
+    mean_time_to_happen = { months = 1 }
+
+    fire_only_once = yes
+
+    option = {
+        name = "EVTOPTA46335"
+        add_country_modifier = { name = disfunctional_military duration = -1 }
+    }
+    
+}
+
+country_event = {
+    id = 46336
+    title = "EVTNAME46336"
+    desc = "EVTDESC46336"
+    picture = EIC_economic_disarray
+    
+    trigger = {
+        year = 1860
+        has_global_flag = EIC_independence
+        tag = EIC
+    }
+    
+    mean_time_to_happen = { months = 1 }
+
+    fire_only_once = yes
+
+    option = {
+        name = "EVTOPTA46336"
+        add_country_modifier = { name = economic_disarray duration = -1 }
+    }
+    
+}

@@ -3635,6 +3635,23 @@ sepoy_mutiny = {
     icon = 16
 }
 
+###Fami EIC Modifiers###
+disfunctional_military = {
+    land_organisation = -0.70
+    org_regain = -0.10
+    army_tech_research_bonus = -0.1
+    icon = 16
+}
+economic_disarray = {
+    industry_tech_research_bonus = -0.1
+	commerce_tech_research_bonus = -0.1
+	global_pop_militancy_modifier = 0.1
+	rgo_output = -0.3
+	factory_throughput = -0.25	
+	icon = 14
+}
+
+
 ###HFM UK Modifiers###
 royal_irish_constabulary = {
     pop_militancy_modifier = -0.03
