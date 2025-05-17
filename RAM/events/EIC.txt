@@ -1149,6 +1149,7 @@ country_event = {
 
     option = {
         name = "EVTOPTA46335"
+        prestige = -10
         add_country_modifier = { name = disfunctional_military duration = -1 }
     }
     
@@ -1164,6 +1165,7 @@ country_event = {
         year = 1860
         has_global_flag = EIC_independence
         tag = EIC
+        has_country_modifier = disfunctional_military
     }
     
     mean_time_to_happen = { months = 1 }
@@ -1172,7 +1174,74 @@ country_event = {
 
     option = {
         name = "EVTOPTA46336"
+        prestige = -10
         add_country_modifier = { name = zamindari_collapse duration = -1 }
     }
     
+}
+
+country_event = {
+    id = 46337
+    title = "EVTNAME46337"
+    desc = "EVTDESC46337"
+    picture = gurkha
+    
+    trigger = {
+        has_global_flag = EIC_independence
+        tag = EIC
+        has_country_modifier = disfunctional_military
+        army_risk_management = 1
+        machine_guns = 1
+        military_logistics = 1
+    }
+    
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    fire_only_once = yes
+
+    option = {
+        name = "EVTOPTA46337"
+        remove_country_modifier = disfunctional_military
+        add_country_modifier = { name = professional_mercenary_army duration = -1 }
+        political_reform = no_draft
+        ai_chance = { factor = 1 }
+    
+    option = {
+        name = "EVTOPTB46337"
+        remove_country_modifier = disfunctional_military
+        
+        ai_chance = { factor = 0 }
+    }
+    }
+}
+country_event = {
+    id = 46337
+    title = "EVTNAME46337"
+    desc = "EVTDESC46337"
+    picture = raj
+    
+    trigger = {
+        has_global_flag = EIC_independence
+        tag = EIC
+        has_country_flag = india_civil_service
+        NOT = { has_country_modifier = disfunctional_military }
+    }
+    
+    mean_time_to_happen = { days = 1 }
+
+    fire_only_once = yes
+
+    option = {
+        name = "EVTOPTA46337"
+        remove_country_modifier = zamindari_collapse
+        add_country_modifier = { name = indian_exploitative_work_practices duration = -1 }
+        ai_chance = { factor = 90 }
+    }
+    
+    option = {
+        name = "EVTOPTB46337"
+        remove_country_modifier = zamindari_collapse
+    }
 }
