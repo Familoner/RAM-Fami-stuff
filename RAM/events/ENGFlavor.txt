@@ -1692,7 +1692,8 @@ country_event = {
 	fire_only_once = yes
 
     trigger = {
-        tag = ENG
+        owns = 1251
+        primary_culture = english
         nationalism_n_imperialism = 1
         is_greater_power = yes
         BUR = {
