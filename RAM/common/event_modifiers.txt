@@ -3642,12 +3642,10 @@ disfunctional_military = {
     army_tech_research_bonus = -0.1
     icon = 16
 }
-economic_disarray = {
-    industry_tech_research_bonus = -0.1
-	commerce_tech_research_bonus = -0.1
+zamindari_collapse = {
 	global_pop_militancy_modifier = 0.1
-	rgo_output = -0.3
-	factory_throughput = -0.25	
+	tax_efficiency = -0.4
+    min_tax = 0.1
 	icon = 14
 }
 

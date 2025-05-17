@@ -1172,7 +1172,7 @@ country_event = {
 
     option = {
         name = "EVTOPTA46336"
-        add_country_modifier = { name = economic_disarray duration = -1 }
+        add_country_modifier = { name = zamindari_collapse duration = -1 }
     }
     
 }
