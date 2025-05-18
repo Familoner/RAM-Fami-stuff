@@ -1707,7 +1707,7 @@ country_event = {
             civilized = no
             is_vassal = no
             any_owned_province = { port = yes }
-            NOT = { truce_with = ENG }
+            NOT = { truce_with = THIS }
         }
         NOT = { has_global_flag = berlin_conference }
         OR = {
@@ -3808,7 +3808,7 @@ country_event = {
             civilized = no
             is_vassal = no
             exists = yes
-            NOT = { truce_with = ENG }
+            NOT = { truce_with = THIS }
         }
         OR = {
             war_policy = jingoism
