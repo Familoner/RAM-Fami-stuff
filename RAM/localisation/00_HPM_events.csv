@@ -2139,7 +2139,7 @@ EVT36950OPTA;We agree to the sale.;;;;;;;;;;;;;
 EVT36950OPTB;There's no need for conflict with the Ashanti.;;;;;;;;;;;;;
 EVTNAME36955;Conflict with Burma;;;;;;;;;;;;;
 EVTDESC36955;\n\nA Commodore who was recently dispatched to Burma to negotiate several matters regarding the Treaty of Yandabo, signed in 1826 after the First Anglo-Burmese War, has initiated a naval confrontation with the Burmese under questionable circumstances. While many are calling this Commodore an 'irrational jingoist', the English cannot let this matter drop without losing a great deal of prestige.;;;;;;;;;;;;;
-EVT36955OPTA;We must defend British interests. §RGain 2 infamy§W;;;;;;;;;;;;;
+EVT36955OPTA;We must defend our interests. §RGain 2 infamy§W;;;;;;;;;;;;;
 EVT36955OPTB;It is better for Burma to remain an ally.;;;;;;;;;;;;;
 EVTNAME36960;The Gold Coast Treaty;;;;;;;;;;;;;
 EVTDESC36960;\n\nThe $FROMCOUNTRY_ADJ$ government has approached us with the hopes of negotiating a treaty. They want to solidify control over the Gold Coast in Africa, specifically by annexing our colony at Sekondi. In return, they will recognize our colonial holdings elsewhere and encourage greater cooperation between our nations.;;;;;;;;;;;;;

@@ -3795,9 +3795,9 @@ country_event = {
 
     trigger = {
         has_global_flag = berlin_conference
-        tag = ENG
-        nationalism_n_imperialism = 1
         owns = 1330
+        primary_culture = british
+        nationalism_n_imperialism = 1
         is_greater_power = yes
         BUR = {
             OR = {
