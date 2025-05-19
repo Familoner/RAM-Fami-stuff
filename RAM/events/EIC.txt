@@ -1217,9 +1217,9 @@ country_event = {
     }
 }
 country_event = {
-    id = 46337
-    title = "EVTNAME46337"
-    desc = "EVTDESC46337"
+    id = 463338
+    title = "EVTNAME46338"
+    desc = "EVTDESC46338"
     picture = raj
     
     trigger = {
@@ -1234,14 +1234,14 @@ country_event = {
     fire_only_once = yes
 
     option = {
-        name = "EVTOPTA46337"
+        name = "EVTOPTA46338"
         remove_country_modifier = zamindari_collapse
         add_country_modifier = { name = indian_exploitative_work_practices duration = -1 }
         ai_chance = { factor = 90 }
     }
     
     option = {
-        name = "EVTOPTB46337"
+        name = "EVTOPTB46338"
         remove_country_modifier = zamindari_collapse
     }
 }
