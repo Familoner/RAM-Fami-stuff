@@ -1207,13 +1207,12 @@ country_event = {
         add_country_modifier = { name = professional_mercenary_army duration = -1 }
         political_reform = no_draft
         ai_chance = { factor = 1 }
+    }
     
     option = {
         name = "EVTOPTB46337"
         remove_country_modifier = disfunctional_military
-        
         ai_chance = { factor = 0 }
-    }
     }
 }
 country_event = {

@@ -3652,13 +3652,14 @@ professional_mercenary_army = {
 	org_regain = 0.2
 	land_organisation = 0.2
 	land_unit_start_experience = 5
+    min_military_spending = 0.5
     mobilisation_size = -2
 }
 indian_exploitative_work_practices = {
     rgo_output = 0.1
 	rgo_throughput = 0.3
 	factory_throughput = -0.4
-	global_population_growth = -0.01
+	global_population_growth = -0.001
     non_accepted_pop_militancy_modifier = 0.01
 }
 
