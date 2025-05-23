@@ -3,6 +3,7 @@ political_decisions = {
     government_of_india_act = {
         picture = map_india
         potential = {
+            NOT = { has_global_flag = eng_retreat_india }
             OR = {
                 tag = ENG
                 tag = ENL
@@ -31,7 +32,6 @@ political_decisions = {
                 year = 1861
             }
             NOT = { has_country_flag = gov_india }
-			NOT = { has_global_flag = eng_retreat_india }
         }
 
         allow = {
@@ -433,6 +433,30 @@ political_decisions = {
                 name = anglification
                 duration = -1
             }
+        }
+    }
+    expand_doctrine_of_lapse = {
+        picture = map_india
+    
+        potential = { 
+            has_global_flag = berlin_congress_held
+            tag = EIC
+            NOT = { has_country_flag = doctrine_of_lapse_expanded }
+        }
+    
+        allow = {
+            war = no
+            money = 1000000
+            has_country_flag = eic_adm_reform
+            has_country_flag = eic_mil_reform
+        }
+    
+        effect = { 
+            set_country_flag = doctrine_of_lapse_expanded
+        }
+    
+        ai_will_do = {
+            factor = 1
         }
     }
 }
