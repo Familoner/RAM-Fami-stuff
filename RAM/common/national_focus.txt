@@ -123,18 +123,12 @@ diplomatic_focus = {
     increase_tension = {
         icon = 10
         has_flashpoint = yes
-        own_provinces = no
+        own_provinces = yes
 
         flashpoint_tension = 0.15
 
         limit = {
-            owner = {
-                has_global_flag = revolution_n_counter_researched
-                NOT = { vassal_of = THIS }
-                NOT = { substate_of = THIS }
-            }
-            is_core = THIS
-            THIS = { is_greater_power = no }
+            has_global_flag = to_be_removed
         }
     }
 }

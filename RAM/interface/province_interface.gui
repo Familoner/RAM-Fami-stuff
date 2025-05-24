@@ -582,7 +582,7 @@ guiTypes = {
 			iconType = {
 				name = "background"
 				spriteType = "GFX_province_colony_bg"
-				position = { x = 11 y = 59 }
+				position = { x = 11 y = 26 }
 				Orientation = "UPPER_LEFT"
 			}			
 			
@@ -874,7 +874,7 @@ guiTypes = {
 			iconType = {
 				name = "background"
 				spriteType = "GFX_province_other_bg"
-				position = { x = 11 y = 59 }
+				position = { x = 11 y = 26 }
 				Orientation = "UPPER_LEFT"
 			}			
 			
