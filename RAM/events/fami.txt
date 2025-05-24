@@ -127,7 +127,7 @@ country_event = { # Explanation Event
         }
     }
     mean_time_to_happen = {
-        days = 1
+        months = 16
     }
 	
 	# This is an example of how you would set up a Dynamic Loc Event. This event would be triggered to CLN.
@@ -163,9 +163,9 @@ country_event = { # Explanation Event
 		# slot 37 desc 1
 		2740 = { secede_province = THIS state_scope = { change_region_name = "Due to the expansion of the doctrine of lapse a opportunity to annex the princely state of" } secede_province = QQQ }
 		# slot 36 desc 2
-		2739 = { secede_province = THIS state_scope = { change_region_name = "has arisen. By offering a generous compensation to the local aristocracy of" } secede_province = QQQ }
-		# slot 35 desc 3
-		2738 = { secede_province = THIS state_scope = { change_region_name = "we could have them sign away their autonomy behind their ruler's back." } secede_province = QQQ }  
+		2739 = { secede_province = THIS state_scope = { change_region_name = "has arisen. By offering a generous compensation to the local aristocracy" } secede_province = QQQ }
+		# slot 33 desc 3
+		2736 = { secede_province = THIS state_scope = { change_region_name = "we could have them sign away their autonomy behind their ruler's back." } secede_province = QQQ }  
 
         any_country = {
             limit = {
@@ -197,7 +197,7 @@ country_event = { # Explanation Event
 		slot_2 = {} #country flag
         black = {}
         slot_36 = {}
-        slot_35 = {}
+        slot_33 = {}
 	}
 	
 	
