@@ -3635,6 +3635,34 @@ sepoy_mutiny = {
     icon = 16
 }
 
+###Fami EIC Modifiers###
+disfunctional_military = {
+    land_organisation = -0.70
+    org_regain = -0.10
+    army_tech_research_bonus = -0.1
+    icon = 16
+}
+zamindari_collapse = {
+	global_pop_militancy_modifier = 0.1
+	tax_efficiency = -0.4
+    min_tax = 0.1
+	icon = 14
+}
+professional_mercenary_army = {
+	org_regain = 0.2
+	land_organisation = 0.2
+	land_unit_start_experience = 5
+    min_military_spending = 0.5
+    mobilisation_size = -2
+}
+indian_exploitative_work_practices = {
+    rgo_output = 0.1
+	rgo_throughput = 0.3
+	factory_throughput = -0.4
+	global_population_growth = -0.001
+    non_accepted_pop_militancy_modifier = 0.01
+}
+
 ###HFM UK Modifiers###
 royal_irish_constabulary = {
     pop_militancy_modifier = -0.03
