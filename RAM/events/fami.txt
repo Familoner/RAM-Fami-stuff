@@ -155,7 +155,7 @@ country_event = { # Explanation Event
 		# slot 37 desc 1
 		2740 = { secede_province = THIS state_scope = { change_region_name = "Due to the expansion of the doctrine of lapse a opportunity to annex the princely state of" } secede_province = QQQ }
 		# slot 36 desc 2
-		2739 = { secede_province = THIS state_scope = { change_region_name = "has arisen. By offering a generous compensation to the local aristocracy" } secede_province = QQQ }
+		2739 = { secede_province = THIS state_scope = { change_region_name = "has arisen. By offering generous compensation to local aristocracy" } secede_province = QQQ }
 		# slot 33 desc 3
 		2736 = { secede_province = THIS state_scope = { change_region_name = "we could have them sign away their autonomy behind their ruler's back." } secede_province = QQQ }  
 
@@ -202,6 +202,7 @@ country_event = { # Explanation Event
             country_event = 46341
             clr_country_flag = example_country
         }
+        ai_will_do = { factor = 90 }
     }
 
     option = {
@@ -209,7 +210,8 @@ country_event = { # Explanation Event
         any_country = {
             limit = { has_country_flag = example_country }
             clr_country_flag = example_country
-        }        
+        }
+        ai_will_do = { factor = 10 }        
     }
 }
 

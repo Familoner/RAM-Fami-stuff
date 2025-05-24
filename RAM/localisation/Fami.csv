@@ -12,9 +12,21 @@ EVTOPTB46337;It's better to keep it as it is.
 EVTNAME46338;Zamindars Brought back under control;;;;;;;;;;;;;
 EVTDESC46338;\n\nAfter through modernization of the presidential armies and the creation of the Indian Civil Service, the government finally has the means to uproot the unruly Zamindars. The entire system was officially abolished and the Ryotwari system, in which the government taxed the individual cultivator directly, became the dominant system in the country.;;;;;;;;;;;;;
 EVTOPTA46338;Now the green line will finally go up!;;;;;;;;;;;;;
+EVTNAME46341;Princely Status Abolished;;;;;;;;;;;;;
+EVTDESC46341;\n\nOur status as a princely state has been revoked by our overlord as per the Doctrine of Lapse.;;;;;;;;;;;;;
+EVTOPTA46341;We will not go without a fight!
+EVTOPTB46341;So this is how it ends...;;;;;;;;;;;;;
+EVTNAME46342;Annexation Refused;;;;;;;;;;;;;
+EVTDESC46342;\n\nOur subject has refused the abolition of their princely status and has declared independence.;;;;;;;;;;;;;
+EVTOPTA46342;To arms!;;;;;;;;;;;;;
+EVTNAME46343;They Reluctantly accept;;;;;;;;;;;;;
+EVTDESC46343;\n\nOur subject has reluctantly abdicated.;;;;;;;;;;;;;
+EVTOPTA46343;Fantastic.;;;;;;;;;;;;;
 disfunctional_military;Disfunctional Armies;;;;;;;;;;;;;
 disfunctional_military_desc;Many of the sepoys grow restless or outright rebellious, attempted mutinies, indiscipline, desertion have become common, crippling our Presidency armies.;;;;;;;;;;;;;
 zamindari_collapse;Zamindar Defiance;;;;;;;;;;;;;
 zamindari_collapse_desc;The Zamindar's responsible for collecting taxes in many territories have grown too powerful, not fulfilling their obligations and outright working against us.;;;;;;;;;;;;;
 professional_mercenary_army;Expanded Foreign Recruitment;;;;;;;;;;;;;
 professional_mercenary_army_desc;By recruiting experienced fighters from abroad we have managed to create a experienced officer corp to run our presidential armies;;;;;;;;;;;;;
+expand_doctrine_of_lapse_title;Expand Doctrine of Lapse;;;;;;;;;;;;;
+expand_doctrine_of_lapse_desc;Usually associated with Dalhousie, the doctrine of lapse was vigorously used to annex princely states if the prince was either "manifestly incompetent or died without a male heir". We could reformulate this doctrine in a way that even minor incidents could be used as justification to abolish princely status as long as we have local aristocratic support.;;;;;;;;;;;;;

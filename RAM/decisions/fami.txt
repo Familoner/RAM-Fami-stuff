@@ -1,6 +1,6 @@
 political_decisions = {
    expand_doctrine_of_lapse = {
-        picture = map_india
+        picture = doctrine_of_lapse
     
         potential = { 
             has_global_flag = berlin_congress_held
@@ -16,6 +16,8 @@ political_decisions = {
         }
     
         effect = { 
+            prestige = 10
+            money = -1000000
             set_country_flag = doctrine_of_lapse_expanded
         }
     
