@@ -9,7 +9,12 @@ EVTNAME46337;Reforming the Presidential Armies;;;;;;;;;;;;;
 EVTDESC46337;\n\nThrough a harsh crackdown effort from the upper echelons of the government the most disloyal sepoys were removed from their position, arrested or even executed depending on the severity of their disciplinary transgressions, most corrupt officers who took advantage of the breakdown of discipline were removed from their positions and arrested. Discipline was restored yet there's a gap in personnel to fill, reformists within the military advocate to expanding foreign recruitment, giving generous wages to attract the most skilled officers and fighters money could acquire from all parts of the globe. Hardliners within the army object to this and would prefer we fill this gap traditionally with local soldiers and English officers.;;;;;;;;;;;;;
 EVTOPTA46337;Professionalism is the way to go!
 EVTOPTB46337;It's better to keep it as it is.
+EVTNAME46338;Zamindars Brought back under control;;;;;;;;;;;;;
+EVTDESC46338;\n\nAfter through modernization of the presidential armies and the creation of the Indian Civil Service, the government finally has the means to uproot the unruly Zamindars. The entire system was officially abolished and the Ryotwari system, in which the government taxed the individual cultivator directly, became the dominant system in the country.;;;;;;;;;;;;;
+EVTOPTA46338;Now the green line will finally go up!;;;;;;;;;;;;;
 disfunctional_military;Disfunctional Armies;;;;;;;;;;;;;
 disfunctional_military_desc;Many of the sepoys grow restless or outright rebellious, attempted mutinies, indiscipline, desertion have become common, crippling our Presidency armies.;;;;;;;;;;;;;
 zamindari_collapse;Zamindar Defiance;;;;;;;;;;;;;
 zamindari_collapse_desc;The Zamindar's responsible for collecting taxes in many territories have grown too powerful, not fulfilling their obligations and outright working against us.;;;;;;;;;;;;;
+professional_mercenary_army;Expanded Foreign Recruitment;;;;;;;;;;;;;
+professional_mercenary_army_desc;By recruiting experienced fighters from abroad we have managed to create a experienced officer corp to run our presidential armies;;;;;;;;;;;;;

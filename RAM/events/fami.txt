@@ -105,14 +105,6 @@ country_event = {
     option = {
         name = "EVTOPTA46338"
         remove_country_modifier = zamindari_collapse
-        add_country_modifier = { name = indian_exploitative_work_practices duration = -1 }
-        set_country_flag = eic_adm_reform
-        ai_chance = { factor = 90 }
-    }
-    
-    option = {
-        name = "EVTOPTB46338"
-        remove_country_modifier = zamindari_collapse
         set_country_flag = eic_adm_reform
     }
 }
