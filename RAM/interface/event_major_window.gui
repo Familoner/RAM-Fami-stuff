@@ -20,7 +20,7 @@ guiTypes = {
 		{
 			name = "event_images"
 			spriteType = "GFX_event_no_image"
-			position = { x = 35 y = 110 }
+			position = { x = 0 y = 110 }
 			Orientation = "UPPER_LEFT"
 		}
 		
@@ -29,7 +29,7 @@ guiTypes = {
 			{
 				name = "country_flag1"
 				spriteType = "GFX_flag_event2"
-				position = { x = -100 y = 49 }
+				position = { x = -5130 y = 49 }
 				Orientation = "UPPER_LEFT"
 				rotation = -1.5708
 			}
@@ -37,7 +37,7 @@ guiTypes = {
 			{
 				name = "country_flag2"
 				spriteType = "GFX_flag_event"
-				position = { x = 555 y = 49 }
+				position = { x = 5480 y = 49 }
 				Orientation = "UPPER_LEFT"
 				rotation = -1.5708
 			}
@@ -72,10 +72,10 @@ guiTypes = {
 				name = "Description"
 				position = { x = 26 y = 280 }
 				textureFile = ""
-				font = "vic_18_black"
+				font = "vic_18_black_no_colon"
 				borderSize = { x = 0 y = 0 }
 				text = "Long text here!"	
-				maxWidth = 534
+				maxWidth = 518
 				maxHeight = 245
 
 				format = centre
