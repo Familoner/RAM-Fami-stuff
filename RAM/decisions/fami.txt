@@ -31,6 +31,7 @@ political_decisions = {
         potential = {
             NOT = { has_global_flag = EIC_NET_war }
             tag = EIC
+            is_greater_power = yes
             has_global_flag = berlin_congress_held
             has_country_flag = eic_mil_reform
             has_country_flag = eic_adm_reform
