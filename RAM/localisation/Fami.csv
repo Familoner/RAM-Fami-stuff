@@ -29,4 +29,8 @@ zamindari_collapse_desc;The Zamindar's responsible for collecting taxes in many 
 professional_mercenary_army;Expanded Foreign Recruitment;;;;;;;;;;;;;
 professional_mercenary_army_desc;By recruiting experienced fighters from abroad we have managed to create a experienced officer corp to run our presidential armies;;;;;;;;;;;;;
 expand_doctrine_of_lapse_title;Expand Doctrine of Lapse;;;;;;;;;;;;;
-expand_doctrine_of_lapse_desc;Usually associated with Dalhousie, the doctrine of lapse was vigorously used to annex princely states if the prince was either "manifestly incompetent or died without a male heir". We could reformulate this doctrine in a way that even minor incidents could be used as justification to abolish princely status as long as we have local aristocratic support.;;;;;;;;;;;;;
+expand_doctrine_of_lapse_desc;Usually associated with Dalhousie, the doctrine of lapse was vigorously used to annex princely states if the prince was either "manifestly incompetent or died without a male heir". We could reformulate this doctrine in a way that even minor incidents could be used as justification to abolish princely status.;;;;;;;;;;;;;
+invade_indonesia_title;Invade The Dutch East Indies.;;;;;;;;;;;;;
+invade_indonesia_desc;The East India Company, founded in 1600, originally competed in the spice trade but was driven out of the spice islands by the better funded Dutch East India Company (VOC), resulting in the company seek trading opportunities in India instead. Now the spice trade has declined and the VOC is long gone, yet the Dutch East Indies remain a profitable and well strategically placed colony, perhaps it's time to sail to the spice islands once more?;;;;;;;;;;;;;
+NORMAL_CUT_DOWN_TO_SIZE_NO_INFAMY_WAR_NAME_EIC_NET;The Indies War;;;;;;;;;;;;;
+AGRESSION_CUT_DOWN_TO_SIZE_NO_INFAMY_WAR_NAME_EIC_NET;The Indies War;;;;;;;;;;;;;

@@ -22,7 +22,40 @@ political_decisions = {
         }
     
         ai_will_do = {
-            factor = 1
+            factor = 0
+        }
+    }
+    invade_indonesia = {
+        picture = map_east_indies
+
+        potential = {
+            NOT = { has_global_flag = EIC_NET_war }
+            tag = EIC
+            has_global_flag = berlin_congress_held
+            has_country_flag = eic_mil_reform
+            has_country_flag = eic_adm_reform
+            has_country_flag = burma_3
+        }
+
+        allow = {
+            war = no
+            revolution_n_counterrevolution = 1
+            NET = { owns = 1413 }
+        }
+
+        effect = {
+            set_global_flag = EIC_NET_war
+            badboy = 15
+            war = {
+                target = NET
+                attacker_goal = {
+                    casus_belli = scripted_war_big
+                }
+                defender_goal = {
+                    casus_belli = scripted_war_big
+                }
+                call_ally = yes
+            }
         }
     }
 }
