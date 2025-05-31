@@ -40,6 +40,7 @@ political_decisions = {
         allow = {
             war = no
             revolution_n_counterrevolution = 1
+            NOT = { relation = { who = NET value = 100 } }
             NET = { owns = 1413 }
         }
 
