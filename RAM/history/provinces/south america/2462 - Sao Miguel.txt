@@ -1,0 +1,10 @@
+add_core = BRZ
+add_core = CRT
+add_core = ARC
+add_core = PRG
+add_core = SAC
+add_core = SAP
+terrain = jungle_hills
+trade_goods = tea
+life_rating = 5
+colonial = 1

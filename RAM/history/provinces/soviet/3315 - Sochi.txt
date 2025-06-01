@@ -1,0 +1,6 @@
+owner = CIR
+controller = CIR
+add_core = CIR
+trade_goods = fish
+fort = 2
+life_rating = 35

@@ -1,0 +1,7 @@
+add_core = CLM
+add_core = VNZ
+life_rating = 5
+trade_goods = fish
+1836.1.1 = {
+remove_core = VNZ
+}
