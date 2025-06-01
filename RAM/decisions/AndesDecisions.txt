@@ -510,8 +510,6 @@ political_decisions = {
 		effect = {
 			set_country_flag = fgc_claimed_uca
 			random_owned = { limit = { owner = { NOT = { accepted_culture = central_american } } } owner = { add_accepted_culture = central_american } }
-			clr_country_flag = panamanian_integration
-			remove_country_modifier = panamanian_integration
 			UCA_2186 = { add_core = THIS }
 			UCA_2191 = { add_core = THIS }
 			CLM_1723 = { add_core = THIS }
@@ -599,7 +597,7 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { has_global_flag = PEU_partition } }
 				owner = {
-					BOL = { all_core = { limit = { NOT = { is_core = CHL is_core = BRZ } } add_core = THIS } }
+					BOL = { all_core = { limit = { NOT = { is_core = CHL is_core = BRZ region = PRG_2338 } } add_core = THIS } }
 				}
 			}
 			random_owned = {
@@ -615,6 +613,37 @@ political_decisions = {
 				factor = 0
 				AND = { has_global_flag = LPL_cuzco_treaty NOT = { has_global_flag = bolivia_claimed } }
 			}
+		}
+	}
+
+	brz_reclaims_amazonas = {
+	picture = administration
+		potential = {
+			tag = BRZ
+			has_global_flag = GCO_DESTROYED_BRZ
+			OR = {
+				3994 = { NOT = { is_core = BRZ } }
+				3991 = { NOT = { is_core = BRZ } }
+			}
+			NOT = { has_country_flag = amazonas_reclaimed }
+		}
+		
+		allow = {
+			year = 1860
+			rank = 16
+			OR = {
+				is_greater_power = yes
+				NOT = { GCO = { is_greater_power = yes } FGC = { is_greater_power = yes } }
+			}
+		}
+		
+		effect = {
+			set_country_flag = amazonas_reclaimed
+			BRZ_2408 = { add_core = BRZ add_core = PAA }
+			BRZ_2416 = { add_core = BRZ }
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 
@@ -712,7 +741,11 @@ political_decisions = {
 			2295 = { owned_by = GCO is_core = GCO }
 			BOL = { exists = yes }
 			NOT = { has_country_flag = lost_the_war }
-			OR = { ARC = { has_country_flag = lost_the_war } ARG = { has_country_flag = lost_the_war } LPL = { has_country_flag = lost_the_war } }
+			OR = {
+				ARC = { has_country_flag = lost_the_war }
+				ARG = { has_country_flag = lost_the_war }
+				LPL = { has_country_flag = lost_the_war }
+			}
 			NOT = { has_global_flag = treaty_of_sucre }
 		}
 		

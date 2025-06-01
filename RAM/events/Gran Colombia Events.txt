@@ -111,6 +111,7 @@ country_event = {
 		tag = GCO
 		owns = 2279 #Quito
 		PBC = { exists = yes is_vassal = no }
+		PEU = { exists = yes vassal_of = PBC }
 		OR = {
 			CHL = { has_country_flag = fight_the_PBC }
 			CHL = { war_with = PBC }
@@ -739,47 +740,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = { days = 10 }
-	
-	option = {
-		name = "Save them from the Platine cluthes!"
-		prestige = 5
-		set_global_flag = Saving_Bolivia
-		BOL = { military_access = GCO create_alliance = GCO relation = { who = GCO value = 400 } }
-		diplomatic_influence = { who = BOL value = 400 }
-		random_owned = { 
-			limit = { owner = { exists = ARG } }
-			owner = {
-				war = {
-					target = ARG 
-					attacker_goal = { casus_belli = scripted_war }
-					defender_goal = { casus_belli = scripted_war }
-					call_ally = no
-				}
-			}
-		}
-		random_owned = { 
-			limit = { owner = { exists = LPL } }
-			owner = {
-				war = {
-					target = LPL
-					attacker_goal = { casus_belli = scripted_war } 
-					defender_goal = { casus_belli = scripted_war }
-					call_ally = no
-				}
-			}
-		}
-		ai_chance = {
-			factor = 15
-			modifier = {
-				factor = 0
-				has_country_flag = grao_para_taken
-			}
-			modifier = {
-				factor = 1000
-				has_country_flag = matto_grosso_taken
-			}
-		}
-	}
+
 	option = {
 		name = "Negotiate with Argentina."
 		set_global_flag = Saving_Bolivia
@@ -807,7 +768,47 @@ country_event = {
 			factor = 84
 			modifier = {
 				factor = 0
-				has_country_flag = matto_grosso_taken
+				has_global_flag = gco_matto_grosso_taken
+			}
+		}
+	}
+	option = {
+		name = "Save them from the Platine cluthes!"
+		prestige = 5
+		set_global_flag = Saving_Bolivia
+		BOL = { military_access = GCO create_alliance = GCO relation = { who = GCO value = 400 } }
+		diplomatic_influence = { who = BOL value = 400 }
+		random_owned = { 
+			limit = { owner = { exists = ARG } }
+			owner = {
+				war = {
+					target = ARG 
+					attacker_goal = { casus_belli = scripted_war_small country = GCO }
+					defender_goal = { casus_belli = scripted_war_small country = ARG }
+					call_ally = no
+				}
+			}
+		}
+		random_owned = { 
+			limit = { owner = { exists = LPL } }
+			owner = {
+				war = {
+					target = LPL
+					attacker_goal = { casus_belli = scripted_war_small country = GCO } 
+					defender_goal = { casus_belli = scripted_war_small country = LPL }
+					call_ally = no
+				}
+			}
+		}
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_global_flag = gco_grao_para_taken
+			}
+			modifier = {
+				factor = 1000
+				has_global_flag = gco_matto_grosso_taken
 			}
 		}
 	}
@@ -880,8 +881,8 @@ country_event = {
 			owner = {
 				war = {
 					target = ARG 
-					attacker_goal = { casus_belli = scripted_war }
-					defender_goal = { casus_belli = scripted_war }
+					attacker_goal = { casus_belli = scripted_war_small country = GCO }
+					defender_goal = { casus_belli = scripted_war_small country = ARG }
 					call_ally = no
 				}
 			}
@@ -891,8 +892,8 @@ country_event = {
 			owner = {
 				war = {
 					target = LPL
-					attacker_goal = { casus_belli = scripted_war } 
-					defender_goal = { casus_belli = scripted_war }
+					attacker_goal = { casus_belli = scripted_war_small country = GCO } 
+					defender_goal = { casus_belli = scripted_war_small country = LPL }
 					call_ally = no
 				}
 			}
@@ -1057,10 +1058,10 @@ country_event = {
 	mean_time_to_happen = { days = 8 }
 	
 	option = {
-		name = "Let them go. §GLose 3 infamy§"
+		name = "Let them go. §GLose 5 infamy§"
 		set_country_flag = peace_with_bolivia
 		prestige = -5
-		badboy = -3
+		badboy = -5
 		all_core = { remove_core = BOL }
 		3380 = { remove_core = BOL }
 		3990 = { remove_core = BOL }
@@ -1096,6 +1097,7 @@ country_event = {
 	option = {
 		name = "Bolivia is a integral part of Bolivar's project.§RGain 10 infamy§"
 		prestige = 10
+		badboy = 10
 		GCO = { release_vassal = BOL }
 		diplomatic_influence = { who = BOL value = -200 }
 		war = {
@@ -1124,11 +1126,11 @@ country_event = {
 			factor = 9
 			modifier = {
 				factor = 0
-				has_country_flag = grao_para_taken
+				has_global_flag = gco_grao_para_taken
 			}
 			modifier = {
 				factor = 100
-				has_country_flag = matto_grosso_taken
+				has_global_flag = gco_matto_grosso_taken
 			}
 		}
 	}
@@ -1417,7 +1419,7 @@ country_event = {
 		badboy = 10
 		prestige = 25
 		set_global_flag = GCO_DESTROYED_BRZ
-		set_country_flag = grao_para_taken
+		set_global_flag = gco_grao_para_taken
 		BRZ = { country_event = 62037 }
 		add_country_modifier = { name = the_homestead_act duration = -1 }
 		2415 = { add_core = GCO }
@@ -1568,7 +1570,7 @@ country_event = {
 		badboy = 20
 		prestige = 30
 		set_global_flag = GCO_DESTROYED_BRZ
-		set_country_flag = matto_grosso_taken
+		set_global_flag = gco_matto_grosso_taken
 		BRZ = { country_event = 62037 }
 		add_country_modifier = { name = the_homestead_act duration = -1 }
 		2415 = { add_core = GCO }
@@ -2137,101 +2139,5 @@ country_event = {
 			}
 			add_province_modifier = { name = small_baby_boom duration = 1825 }
 		}
-	}
-}
-country_event = {
-	id = 62052
-	title = "The Acre settlement"
-	desc = "62052_desc"
-	picture = "administration"
-	
-	trigger = {
-		NOT = { tag = GCO tag = FGC }
-		has_global_flag = GCO_DESTROYED_BRZ
-		OR = {
-			3382 = { empty = no owned_by = THIS }
-			2321 = { empty = no owned_by = THIS }
-		}
-		NOT = { has_country_flag = acre_settlement }
-	}
-	
-	option = {
-		name = "Give the settlement to Colombia!"
-		set_country_flag = acre_settlement
-		badboy = -2
-		prestige = -2
-		random_owned = {
-			limit = { GCO = { exists = yes } }
-			owner = {
-				any_owned = {
-					limit = {
-						OR = {
-							province_id = 3382
-							province_id = 2321
-							province_id = 4187
-							province_id = 3381
-							province_id = 3435
-							province_id = 3326
-							province_id = 2549
-						}
-					}
-					secede_province = GCO
-				}
-				GCO = { country_event = 62053 }
-			}
-		}
-		random_owned = {
-			limit = { FGC = { exists = yes } }
-			owner = {
-				any_owned = {
-					limit = {
-						OR = {
-							province_id = 3382
-							province_id = 2321
-							province_id = 4187
-							province_id = 3381
-							province_id = 3435
-							province_id = 3326
-							province_id = 2549
-						}
-					}
-					secede_province = FGC
-				}
-				FGC = { country_event = 62053 }
-			}
-		}
-        ai_chance = {
-			factor = 99
-			modifier = {
-				factor = 0
-				GCO = { exists = yes }
-				NOT = { GCO = { military_score = THIS } }
-			}
-			modifier = {
-				factor = 0
-				FGC = { exists = yes }
-				NOT = { FGC = { military_score = THIS } }
-			}
-		}
-	}
-	option = {
-		name = "We settled it fair and square!"
-		set_country_flag = acre_settlement
-		prestige = 5
-        ai_chance = { factor = 1 }
-	}
-}
-country_event = {
-	id = 62053
-	title = "$FROMCOUNTRY$ has gave us the acre settlement"
-	desc = "62053_desc"
-	picture = "administration"
-	fire_only_once =  yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "No more conflicts bewteen us."
-		relation = { who = FROM value = 50 }
 	}
 }
