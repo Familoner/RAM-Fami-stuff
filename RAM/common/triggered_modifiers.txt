@@ -267,7 +267,7 @@ secularized_nation = {
         exists = yes
         has_country_flag = secularized_nation
     }
-	education_efficiency_modifier = 0.8
+	education_efficiency_modifier = 1.0
 	industry_tech_research_bonus = 0.5
 	culture_tech_research_bonus = 0.02
 	research_points_modifier = 0.2
@@ -1529,26 +1529,6 @@ help_ai_late = {
     administrative_efficiency_modifier = 0.05
     supply_consumption = -0.15
     education_efficiency_modifier = 0.25
-}
-
-DVG_badboy_1 = {
-    trigger = {
-        has_global_flag = sw_set
-        is_greater_power = yes
-    }
-    badboy = -0.40
-    icon = 1
-
-}
-
-DVG_badboy_2 = {
-    trigger = {
-        has_global_flag = sw_set
-        is_greater_power = no
-    }
-    badboy = -0.20
-    icon = 1
-
 }
 
 the_statue_of_liberty = {

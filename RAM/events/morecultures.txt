@@ -1,3 +1,336 @@
+#Rise of Bedr Khan
+country_event = {
+    id = 986503
+    title = "EVTNAME986503"
+    desc = "EVTDESC986503"
+    picture = "bedr_khan_massacres"
+    fire_only_once = yes
+
+    trigger = {
+        tag = TUR
+        year = 1840
+		owns = 893
+        war = no
+        BHT = { exists = yes primary_culture = kurdish }
+        EGY = { war = no }
+        NOT = { year = 1860 }
+    }
+
+    mean_time_to_happen = {
+        months = 24
+        modifier = {
+            factor = 0.1
+            year = 1846
+        }
+    }
+
+    immediate = { set_country_flag = massacres_of_badr_khan }
+
+    option = {
+        name = "EVT986503OPTA"
+		random_owned = { #failsafe for dumb AI not taking Rewanduz earlier
+			limit = {
+				owner = {
+					NOT = {
+						TUR = {
+							is_core = 928
+						}
+					}
+					TUR = {
+						is_core = 925
+						is_core = 892
+					}
+				}
+			}
+			owner = {
+				928 = { add_core = TUR }
+			}
+		}
+        set_country_flag = return_persian_lands_on_finish
+        release_vassal = BHT
+        diplomatic_influence = { who = BHT value = -400 }
+        relation = { who = BHT value = -400 }
+        leave_alliance = BHT
+        any_country = {
+            limit = {
+                NOT = { tag = BHT }
+                ai = yes
+                exists = yes
+                OR = {
+                    tag = SRN
+                    tag = BNB
+                    tag = BDN
+                    tag = BTL
+					tag = MLN
+					tag = TSI
+					tag = KHL
+					tag = BZD
+                }
+            }
+            annex_to = BHT
+        }
+		any_owned = { limit = { province_id = 928 } secede_province = BHT }
+        BHT = {
+            badboy = 1
+            set_country_flag = kafir_massacre
+            any_pop = { limit = { has_pop_religion = catholic } reduce_pop = 0.75 }
+            any_pop = { limit = { has_pop_religion = orthodox } reduce_pop = 0.9 }
+            any_pop = { limit = { has_pop_religion = yazidi } reduce_pop = 0.97 }
+            define_general = {
+                name = "Bedr Khan"
+                personality = defence_1.1
+                background = attack_2.1
+            }
+        }
+		BHT = { change_tag = KDS }
+		random_owned = { limit = { owner = { KDS = { government = colonial_company } } } owner = { KDS = { government = absolute_monarchy } } }
+            BHT = { all_core = {
+                remove_core = BHT add_core = KDS
+			} }
+            SRN = { all_core = {
+                remove_core = SRN add_core = KDS
+			} }
+            BNB = { all_core = {
+                remove_core = BNB add_core = KDS
+			} }
+            BDN = { all_core = {
+                remove_core = BDN add_core = KDS
+			} }
+            BTL = { all_core = {
+                remove_core = BTL add_core = KDS
+			} }
+            MLN = { all_core = {
+				remove_core = MLN add_core = KDS
+			} }
+            TSI = { all_core = {
+				remove_core = TSI add_core = KDS
+			} }
+            KHL = { all_core = {
+				remove_core = KHL add_core = KDS
+			} }
+            BZD = { all_core = {
+				remove_core = BZD add_core = KDS
+			} }
+        war = {
+            target = KDS
+            attacker_goal = {
+                casus_belli = conquest_any
+            }
+            defender_goal = { casus_belli = humiliate_no_infamy }
+        }
+
+        ai_chance = {
+            factor = 100
+            modifier = {
+                factor = 0
+                BHT = { ai = no }
+            }
+        }
+    }
+
+    option = {
+        name = "EVT986503OPTB"
+		random_owned = { #failsafe for dumb AI not taking Rewanduz earlier
+			limit = {
+				owner = {
+					NOT = {
+						TUR = {
+							is_core = 928
+						}
+					}
+					TUR = {
+						is_core = 925
+						is_core = 892
+					}
+				}
+			}
+			owner = {
+				928 = { add_core = TUR }
+			}
+		}
+        set_country_flag = return_persian_lands_on_finish
+        release_vassal = BHT
+        diplomatic_influence = { who = BHT value = -400 }
+        relation = { who = BHT value = -400 }
+        PER = { relation = { who = BHT value = -400 } }
+        leave_alliance = BHT
+        any_country = {
+            limit = {
+                NOT = { tag = BHT }
+                ai = yes
+                exists = yes
+                OR = {
+                    tag = SRN
+                    tag = BNB
+                    tag = BDN
+                    tag = BTL
+					tag = MLN
+					tag = TSI
+					tag = KHL
+					tag = BZD
+                }
+            }
+            annex_to = BHT
+        }
+		any_owned = { limit = { province_id = 928 } secede_province = BHT }
+        BHT = {
+            badboy = 1
+            set_country_flag = kafir_massacre
+            any_pop = { limit = { has_pop_religion = catholic } reduce_pop = 0.75 }
+            any_pop = { limit = { has_pop_religion = orthodox } reduce_pop = 0.9 }
+            any_pop = { limit = { has_pop_religion = yazidi } reduce_pop = 0.97 }
+            define_general = {
+                name = "Bedr Khan"
+                personality = defence_1.1
+                background = attack_2.1
+            }
+        }
+		BHT = { change_tag = KDS }
+		random_owned = { limit = { owner = { KDS = { government = colonial_company } } } owner = { KDS = { government = absolute_monarchy } } }
+            BHT = { all_core = {
+                remove_core = BHT add_core = KDS
+			} }
+            SRN = { all_core = {
+                remove_core = SRN add_core = KDS
+			} }
+            BNB = { all_core = {
+                remove_core = BNB add_core = KDS
+			} }
+            BDN = { all_core = {
+                remove_core = BDN add_core = KDS
+			} }
+            BTL = { all_core = {
+                remove_core = BTL add_core = KDS
+			} }
+            MLN = { all_core = {
+				remove_core = MLN add_core = KDS
+			} }
+            TSI = { all_core = {
+				remove_core = TSI add_core = KDS
+			} }
+            KHL = { all_core = {
+				remove_core = KHL add_core = KDS
+			} }
+            BZD = { all_core = {
+				remove_core = BZD add_core = KDS
+			} }
+
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 0
+                BHT = { ai = yes }
+            }
+        }
+    }
+
+    option = {
+        name = "EVT986503OPTC"
+		random_owned = { #failsafe for dumb AI not taking Rewanduz earlier
+			limit = {
+				owner = {
+					NOT = {
+						TUR = {
+							is_core = 928
+						}
+					}
+					TUR = {
+						is_core = 925
+						is_core = 892
+					}
+				}
+			}
+			owner = {
+				928 = { add_core = TUR }
+			}
+		}
+        prestige = 5
+        release_vassal = BHT
+        diplomatic_influence = { who = BHT value = -400 }
+        leave_alliance = BHT
+        any_country = {
+            limit = {
+                NOT = { tag = BHT }
+                ai = yes
+                exists = yes
+                OR = {
+                    tag = SRN
+                    tag = BNB
+                    tag = BDN
+                    tag = BTL
+					tag = MLN
+					tag = TSI
+					tag = KHL
+					tag = BZD
+                }
+            }
+            annex_to = BHT
+        }
+		any_owned = { limit = { province_id = 928 } secede_province = BHT }
+        BHT = {
+            badboy = 1
+            set_country_flag = kafir_massacre
+            any_pop = { limit = { has_pop_religion = catholic } reduce_pop = 0.75 }
+            any_pop = { limit = { has_pop_religion = orthodox } reduce_pop = 0.9 }
+            any_pop = { limit = { has_pop_religion = yazidi } reduce_pop = 0.97 }
+            define_general = {
+                name = "Bedr Khan"
+                personality = defence_1.1
+                background = attack_2.1
+            }
+        }
+        PER = { relation = { who = BHT value = -400 } }
+
+        any_country = {
+            limit = { is_greater_power = yes capital_scope = { continent = europe } NOT = { tag = THIS } }
+            relation = { who = THIS value = -100 }
+            casus_belli = {
+                target = THIS
+                type = humiliate
+                months = 36
+            }
+        }
+		BHT = {
+			change_tag = KDS 
+		}
+		random_owned = { limit = { owner = { KDS = { government = colonial_company } } } owner = { KDS = { government = absolute_monarchy } } }
+            BHT = { all_core = {
+                remove_core = BHT add_core = KDS
+			} }
+            SRN = { all_core = {
+                remove_core = SRN add_core = KDS
+			} }
+            BNB = { all_core = {
+                remove_core = BNB add_core = KDS
+			} }
+            BDN = { all_core = {
+                remove_core = BDN add_core = KDS
+			} }
+            BTL = { all_core = {
+                remove_core = BTL add_core = KDS
+			} }
+            MLN = { all_core = {
+				remove_core = MLN add_core = KDS
+			} }
+            TSI = { all_core = {
+				remove_core = TSI add_core = KDS
+			} }
+            KHL = { all_core = {
+				remove_core = KHL add_core = KDS
+			} }
+            BZD = { all_core = {
+				remove_core = BZD add_core = KDS
+			} }
+
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 0
+                BHT = { ai = yes }
+            }
+        }
+    }
+}
 
 country_event = {
 	id = 4207101
@@ -20,8 +353,9 @@ country_event = {
 			add_accepted_culture = acadian
 			set_country_flag = new_world_nation
 		}
-		any_owned = {
+		any_land_province = {
 			limit = {
+				is_core = MEX
 				OR = {
 					region = USA_139
 					region = USA_144
@@ -43,10 +377,39 @@ country_event = {
 			}
 			add_core = ULA
 		}
-		any_owned = { limit = { is_core = ULA OR = { province_id = 129 province_id = 128 province_id = 107 province_id = 110 province_id = 111 province_id = 114 } } remove_core = ULA }
+		any_land_province = { limit = { AND = { is_core = MEX is_core = ULA } OR = { province_id = 129 province_id = 128 province_id = 107 province_id = 110 province_id = 111 province_id = 114 } } remove_core = ULA }
 		release_vassal = ULA
 		random_owned = { limit = { owner = { MEX = { has_country_flag = native_protection_act_enacted } } } owner = {  ULA = { country_event = 9375935 } } }
-		ULA = { primary_culture = mexican add_accepted_culture = acadian set_country_flag = new_world_nation add_country_modifier = { name = america_new_world duration = 3650 } }
+		ULA = { add_country_modifier = { name = america_new_world duration = 3650 } }
+		139 = { add_province_modifier = { name = orleans_growth duration = 8030 } }
+		random_owned = { limit = { owner = { slavery = no_slavery } } ULA = { political_reform = no_slavery } }
+		random_owned = { limit = { owner = { public_meetings = no_meeting } } ULA = { political_reform = no_meeting } }
+		random_owned = { limit = { owner = { public_meetings = restricted_meeting } } ULA = { political_reform = restricted_meeting } }
+		random_owned = { limit = { owner = { public_meetings = yes_meeting } } ULA = { political_reform = yes_meeting } }
+		random_owned = { limit = { owner = { debt_law = peonage } } ULA = { political_reform = peonage } }
+		random_owned = { limit = { owner = { debt_law = debtors_prisons } } ULA = { political_reform = debtors_prisons } }
+		random_owned = { limit = { owner = { debt_law = bankruptcy } } } ULA = { political_reform = bankruptcy } }
+		random_owned = { limit = { owner = { press_rights = state_press } } ULA = { political_reform = state_press } }
+		random_owned = { limit = { owner = { press_rights = censored_press } } ULA = { political_reform = censored_press } }
+		random_owned = { limit = { owner = { press_rights = free_press } } ULA = { political_reform = free_press } }
+		random_owned = { limit = { owner = { voting_system = first_past_the_post } } ULA = { political_reform = first_past_the_post } }
+		random_owned = { limit = { owner = { voting_system = jefferson_method } } ULA = { political_reform = jefferson_method } }
+		random_owned = { limit = { owner = { voting_system = proportional_representation } } ULA = { political_reform = proportional_representation } }
+		random_owned = { limit = { owner = { vote_franschise = none_voting } } ULA = { political_reform = none_voting } }
+		random_owned = { limit = { owner = { vote_franschise = landed_voting } } ULA = { political_reform = landed_voting } }
+		random_owned = { limit = { owner = { vote_franschise = wealth_weighted_voting } } ULA = { political_reform = wealth_weighted_voting } }
+		random_owned = { limit = { owner = { vote_franschise = wealth_voting } } ULA = { political_reform = wealth_voting } }
+		random_owned = { limit = { owner = { vote_franschise = universal_weighted_voting } } ULA = { political_reform = universal_weighted_voting } }
+		random_owned = { limit = { owner = { vote_franschise = universal_voting } } ULA = { political_reform = universal_voting } }
+		random_owned = { limit = { owner = { political_parties = underground_parties } } ULA = { political_reform = underground_parties } }
+		random_owned = { limit = { owner = { political_parties = harassment } } ULA = { political_reform = harassment } }
+		random_owned = { limit = { owner = { political_parties = gerrymandering } } ULA = { political_reform = gerrymandering } }
+		random_owned = { limit = { owner = { political_parties = non_secret_ballots } } ULA = { political_reform = non_secret_ballots } }
+		random_owned = { limit = { owner = { political_parties = secret_ballots } } ULA = { political_reform = secret_ballots } }
+		random_owned = { limit = { owner = { upper_house_composition = party_appointed } } ULA = { political_reform = party_appointed } }
+		random_owned = { limit = { owner = { upper_house_composition = appointed } } ULA = { political_reform = appointed } }
+		random_owned = { limit = { owner = { upper_house_composition = state_equal_weight } } ULA = { political_reform = state_equal_weight } }
+		random_owned = { limit = { owner = { upper_house_composition = population_equal_weight } } ULA = { political_reform = population_equal_weight } }
 	}
 }
 
@@ -954,7 +1317,7 @@ country_event = {
                 factor = -5
             }
         }
-        ai_chance = { factor = 100 }
+        ai_chance = { factor = 1 }
     }
 
     option = {
@@ -3000,8 +3363,8 @@ country_event = {
 			add_accepted_culture = north_italian
 		}
 		random_owned = { limit = { owner = { ITA = { primary_culture = south_italian government = absolute_monarchy } } } owner = { ITA = { government = absolute_empire } } }
-		random_owned = { limit = { owner = { ITA = { primary_culture = south_italian government = hms_government } } } owner = { ITA = { government = semi_constitutional_empire } } }
-		random_owned = { limit = { owner = { ITA = { primary_culture = south_italian government = prussian_constitutionalism } } } owner = { ITA = { government = constitutional_empire } } }
+		random_owned = { limit = { owner = { ITA = { primary_culture = south_italian government = prussian_constitutionalism } } } owner = { ITA = { government = semi_constitutional_empire } } }
+		random_owned = { limit = { owner = { ITA = { primary_culture = south_italian government = hms_government } } } owner = { ITA = { government = constitutional_empire } } }
 
     }
 }

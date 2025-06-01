@@ -1,5 +1,0 @@
-OMA = { value = 30 }
-AKR = { value = 20 }
-BOI = { value = -10 }
-MAD = { value = -10 }
-AGC = { value = 40 }

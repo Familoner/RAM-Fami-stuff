@@ -753,26 +753,28 @@ country_event = {
 			limit = { RUS = { owns = 4174 } KHI = { exists = yes is_vassal = no } }
 			4174 = { secede_province = QQQ }
 		}
-		any_owned = {
-			limit = { is_core = KSJ }
+		random_owned = {
+			limit = { is_core = KSJ NOT = { province_id = 1197 } }
 			secede_province = KSJ
 		}
-		any_owned = {
+		random_owned = {
 				limit = { OR = { is_core = KAZ is_core = KSJ is_core = BKY } }
 				remove_province_modifier = nationalist_agitation
 			}
-		any_pop = {
+		RUS = { 
+			any_pop = {
 				limit = { has_pop_culture = kazak }
 				militancy = -8
 				consciousness = -5
+				}
+			relation = {
+				who = KSJ
+				value = 100
 			}
-		relation = {
-			who = KSJ
-			value = 100
-		}
-		diplomatic_influence = {
-			who = KSJ
-			value = 100
+			diplomatic_influence = {
+				who = KSJ
+				value = 100
+			}
 		}
 		KAZ = {
 			any_owned = {
@@ -1124,19 +1126,19 @@ province_event = {
 	
 	option = {
         name = "The Kyrgyz must be stopped!"
-        owner = { prestige = -0.5 }
+        owner = { prestige = -1 }
 		any_pop = { reduce_pop = 0.99 }
 		1189 = { province_event = { id = 52043 } }
     }
 
     mean_time_to_happen = {
-        months = 18
+        months = 24
         modifier = {
-            factor = 1.5
+            factor = 2
             relation = { who = KYR value = 0 }
         }
         modifier = {
-            factor = 0
+            factor = 25
             relation = { who = KYR value = 100 }
         }
         modifier = {
