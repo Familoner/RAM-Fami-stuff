@@ -1418,6 +1418,8 @@ dismantlement_loc_ddr_1b = {}
 dismantlement_loc_ddr_2 = {}
 dismantlement_loc_ddr_3 = {}
 dismantlement_loc_ddr_4 = {}
+dismantlement_total_currency = {}
+dismantlement_total_number = {}
 dismantlement_loc_1 = {}
 dismantlement_loc_2 = {}
 dismantlement_loc_3 = {}
@@ -1444,6 +1446,8 @@ dismantlement_loc_23 = {}
 dismantlement_loc_24 = {}
 dismantlement_loc_25 = {}
 dismantlement_loc_26 = {}
+dismantlement_loc_27 = {}
+dismantlement_loc_28 = {}
 
 
 # RAM Meta States
@@ -1453,6 +1457,8 @@ commabreak_state = {}
 tabbreak_state = {}
 spacebreak_state = {}
 fullstop_state = {}
+backslash = {}
+colon = {}
 
 
 # RAM Key List States
