@@ -1448,6 +1448,8 @@ dismantlement_loc_25 = {}
 dismantlement_loc_26 = {}
 dismantlement_loc_27 = {}
 dismantlement_loc_28 = {}
+dismantlement_loc_29 = {}
+dismantlement_loc_30 = {}
 
 
 # RAM Meta States

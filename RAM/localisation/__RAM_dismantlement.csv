@@ -32,8 +32,10 @@ dismantlement_loc_25;§bThis can be used for high-stakes options during the follo
 dismantlement_loc_26;Mass Politics Researched|;;;;;;;;;;;;;
 dismantlement_loc_27;In Default|;;;;;;;;;;;;;
 dismantlement_loc_28;Ships;;;;;;;;;;;;;
+dismantlement_loc_29;Troops;;;;;;;;;;;;;
+dismantlement_loc_30;Funds;;;;;;;;;;;;;
 dismantlement_total_currency;Total Dismantlement Dollars|;;;;;;;;;;;;;
-dismantlement_total_number;§B18§!;;;;;;;;;;;;;
+dismantlement_total_number;§B23§!;;;;;;;;;;;;;
 EVTDismantlementOverwriteOPTA;Liberate & Overwrite New States;;;;;;;;;;;;;
 EVTDismantlementLiberateOPTB;Liberate Within the Remaining Boundaries;;;;;;;;;;;;;
 EVTDismantlementPuppetOPTC;Install Our Own Regime [§B-3§!] [§R+2§!];;;;;;;;;;;;;
