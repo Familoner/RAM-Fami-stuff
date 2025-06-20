@@ -194,6 +194,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_puppeteer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_puppet clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -3 }
+		badboy = 2
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -215,7 +216,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 
 # Min+1 Options
 country_event = { # Thing the player sees # this is about to get confusing af
-    id = 40442
+    id = 20442
     title = "Mandate for Dissolution" # "Mandate for Dissolution"
     #desc = "EVTDESC1000"
     picture = "RAM\dismantlement_options_default"
@@ -283,6 +284,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_annexer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_annex clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -7 }
+		badboy = 5
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -303,7 +305,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 
 # Min+1 Options
 country_event = { # Thing the player sees # this is about to get confusing af
-    id = 40443
+    id = 20443
     title = "Mandate for Dissolution" # "Mandate for Dissolution"
     #desc = "EVTDESC1000"
     picture = "RAM\dismantlement_options_default"
@@ -371,6 +373,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_puppeteer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_puppet clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -3 }
+		badboy = 2
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -383,6 +386,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_annexer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_annex clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -7 }
+		badboy = 5
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -452,10 +456,6 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		linebreak_state = {}
 		linebreak_state = {}
 		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
 		dismantlement_loc_23 = {}
 		slot_7 = {}
 		#spacebreak_state = {}
@@ -491,7 +491,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 0.99 } NOT = { check_variable = { which = dismantlement_formable value = 1.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -557,8 +557,6 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		linebreak_state = {}
 		linebreak_state = {}
 		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
 		dismantlement_loc_23 = {}
 		slot_7 = {}
 		#spacebreak_state = {}
@@ -592,6 +590,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_puppeteer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_puppet clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -3 }
+		badboy = 2
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -606,7 +605,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 0.99 } NOT = { check_variable = { which = dismantlement_formable value = 1.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -624,7 +623,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 
 # Min+1 Options
 country_event = { # Thing the player sees # this is about to get confusing af
-    id = 40452
+    id = 20452
     title = "Mandate for Dissolution" # "Mandate for Dissolution"
     #desc = "EVTDESC1000"
     picture = "RAM\dismantlement_options_default"
@@ -705,6 +704,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_annexer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_annex clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -7 }
+		badboy = 5
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -719,7 +719,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 0.99 } NOT = { check_variable = { which = dismantlement_formable value = 1.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -737,7 +737,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 
 # Min+1 Options
 country_event = { # Thing the player sees # this is about to get confusing af
-    id = 40453
+    id = 20453
     title = "Mandate for Dissolution" # "Mandate for Dissolution"
     #desc = "EVTDESC1000"
     picture = "RAM\dismantlement_options_default"
@@ -820,6 +820,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_puppeteer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_puppet clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -3 }
+		badboy = 2
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -832,6 +833,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_annexer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_annex clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -7 }
+		badboy = 5
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -846,7 +848,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 0.99 } NOT = { check_variable = { which = dismantlement_formable value = 1.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -913,10 +915,6 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		linebreak_state = {}
 		linebreak_state = {}
 		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
 		dismantlement_loc_23 = {}
 		slot_7 = {}
 		#spacebreak_state = {}
@@ -958,7 +956,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 0.99 } NOT = { check_variable = { which = dismantlement_formable value = 1.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -970,7 +968,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 1.99 } NOT = { check_variable = { which = dismantlement_formable value = 2.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -1036,8 +1034,6 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		linebreak_state = {}
 		linebreak_state = {}
 		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
 		dismantlement_loc_23 = {}
 		slot_7 = {}
 		#spacebreak_state = {}
@@ -1077,6 +1073,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_puppeteer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_puppet clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -3 }
+		badboy = 2
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -1091,7 +1088,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 0.99 } NOT = { check_variable = { which = dismantlement_formable value = 1.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -1103,7 +1100,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 1.99 } NOT = { check_variable = { which = dismantlement_formable value = 2.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -1121,7 +1118,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 
 # Min+1 Options
 country_event = { # Thing the player sees # this is about to get confusing af
-    id = 40462
+    id = 20462
     title = "Mandate for Dissolution" # "Mandate for Dissolution"
     #desc = "EVTDESC1000"
     picture = "RAM\dismantlement_options_default"
@@ -1208,6 +1205,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_annexer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_annex clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -7 }
+		badboy = 5
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -1222,7 +1220,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 0.99 } NOT = { check_variable = { which = dismantlement_formable value = 1.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -1234,7 +1232,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 1.99 } NOT = { check_variable = { which = dismantlement_formable value = 2.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -1252,7 +1250,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 
 # Min+1 Options
 country_event = { # Thing the player sees # this is about to get confusing af
-    id = 40463
+    id = 20463
     title = "Mandate for Dissolution" # "Mandate for Dissolution"
     #desc = "EVTDESC1000"
     picture = "RAM\dismantlement_options_default"
@@ -1341,6 +1339,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_puppeteer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_puppet clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -3 }
+		badboy = 2
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -1353,6 +1352,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_annexer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_annex clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -7 }
+		badboy = 5
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -1367,7 +1367,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 0.99 } NOT = { check_variable = { which = dismantlement_formable value = 1.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -1379,7 +1379,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 1.99 } NOT = { check_variable = { which = dismantlement_formable value = 2.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -1447,10 +1447,6 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		linebreak_state = {}
 		linebreak_state = {}
 		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
 		dismantlement_loc_23 = {}
 		slot_7 = {}
 		#spacebreak_state = {}
@@ -1498,7 +1494,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 0.99 } NOT = { check_variable = { which = dismantlement_formable value = 1.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -1510,7 +1506,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 1.99 } NOT = { check_variable = { which = dismantlement_formable value = 2.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -1522,7 +1518,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 2.99 } NOT = { check_variable = { which = dismantlement_formable value = 3.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -1588,8 +1584,6 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		linebreak_state = {}
 		linebreak_state = {}
 		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
 		dismantlement_loc_23 = {}
 		slot_7 = {}
 		#spacebreak_state = {}
@@ -1635,6 +1629,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_puppeteer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_puppet clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -3 }
+		badboy = 2
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -1649,7 +1644,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 0.99 } NOT = { check_variable = { which = dismantlement_formable value = 1.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -1661,7 +1656,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 1.99 } NOT = { check_variable = { which = dismantlement_formable value = 2.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -1673,7 +1668,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 2.99 } NOT = { check_variable = { which = dismantlement_formable value = 3.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -1691,7 +1686,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 
 # Min+1 Options
 country_event = { # Thing the player sees # this is about to get confusing af
-    id = 40472
+    id = 20472
     title = "Mandate for Dissolution" # "Mandate for Dissolution"
     #desc = "EVTDESC1000"
     picture = "RAM\dismantlement_options_default"
@@ -1784,6 +1779,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_annexer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_annex clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -7 }
+		badboy = 5
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -1798,7 +1794,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 0.99 } NOT = { check_variable = { which = dismantlement_formable value = 1.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -1810,7 +1806,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 1.99 } NOT = { check_variable = { which = dismantlement_formable value = 2.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -1822,7 +1818,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 2.99 } NOT = { check_variable = { which = dismantlement_formable value = 3.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -1840,7 +1836,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 
 # Min+1 Options
 country_event = { # Thing the player sees # this is about to get confusing af
-    id = 40473
+    id = 20473
     title = "Mandate for Dissolution" # "Mandate for Dissolution"
     #desc = "EVTDESC1000"
     picture = "RAM\dismantlement_options_default"
@@ -1935,6 +1931,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_puppeteer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_puppet clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -3 }
+		badboy = 2
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -1947,6 +1944,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_annexer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_annex clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -7 }
+		badboy = 5
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -1961,7 +1959,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 0.99 } NOT = { check_variable = { which = dismantlement_formable value = 1.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -1973,7 +1971,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 1.99 } NOT = { check_variable = { which = dismantlement_formable value = 2.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -1985,7 +1983,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 2.99 } NOT = { check_variable = { which = dismantlement_formable value = 3.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -2052,10 +2050,6 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		linebreak_state = {}
 		linebreak_state = {}
 		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
 		dismantlement_loc_23 = {}
 		slot_7 = {}
 		#spacebreak_state = {}
@@ -2109,7 +2103,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 0.99 } NOT = { check_variable = { which = dismantlement_formable value = 1.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -2121,7 +2115,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 1.99 } NOT = { check_variable = { which = dismantlement_formable value = 2.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -2133,7 +2127,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 2.99 } NOT = { check_variable = { which = dismantlement_formable value = 3.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -2145,7 +2139,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 3.99 } NOT = { check_variable = { which = dismantlement_formable value = 4.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -2211,8 +2205,6 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		linebreak_state = {}
 		linebreak_state = {}
 		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
 		dismantlement_loc_23 = {}
 		slot_7 = {}
 		#spacebreak_state = {}
@@ -2264,6 +2256,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_puppeteer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_puppet clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -3 }
+		badboy = 2
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -2278,7 +2271,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 0.99 } NOT = { check_variable = { which = dismantlement_formable value = 1.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -2290,7 +2283,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 1.99 } NOT = { check_variable = { which = dismantlement_formable value = 2.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -2302,7 +2295,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 2.99 } NOT = { check_variable = { which = dismantlement_formable value = 3.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -2314,7 +2307,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 3.99 } NOT = { check_variable = { which = dismantlement_formable value = 4.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -2332,7 +2325,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 
 # Min+1 Options
 country_event = { # Thing the player sees # this is about to get confusing af
-    id = 40482
+    id = 20482
     title = "Mandate for Dissolution" # "Mandate for Dissolution"
     #desc = "EVTDESC1000"
     picture = "RAM\dismantlement_options_default"
@@ -2431,6 +2424,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_annexer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_annex clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -7 }
+		badboy = 5
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -2445,7 +2439,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 0.99 } NOT = { check_variable = { which = dismantlement_formable value = 1.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -2457,7 +2451,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 1.99 } NOT = { check_variable = { which = dismantlement_formable value = 2.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -2469,7 +2463,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 2.99 } NOT = { check_variable = { which = dismantlement_formable value = 3.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -2481,7 +2475,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 3.99 } NOT = { check_variable = { which = dismantlement_formable value = 4.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -2499,7 +2493,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 
 # Min+1 Options
 country_event = { # Thing the player sees # this is about to get confusing af
-    id = 40483
+    id = 20483
     title = "Mandate for Dissolution" # "Mandate for Dissolution"
     #desc = "EVTDESC1000"
     picture = "RAM\dismantlement_options_default"
@@ -2600,6 +2594,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_puppeteer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_puppet clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -3 }
+		badboy = 2
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -2612,6 +2607,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		set_country_flag = dismantlement_annexer
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dismantlement_annex clr_country_flag = dismantlement_rewriteable_vassal clr_country_flag = dismantlement_independent_core clr_country_flag = dismantlement_rewriteable_core clr_country_flag = dismantlement_targeting_long_buffer }
 		change_variable = { which = dismantlement_currency value = -7 }
+		badboy = 5
 		CLN = { country_event = 20490 }
 		ai_chance = { 
 			factor = 0.01
@@ -2626,7 +2622,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 0.99 } NOT = { check_variable = { which = dismantlement_formable value = 1.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -2638,7 +2634,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 1.99 } NOT = { check_variable = { which = dismantlement_formable value = 2.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -2650,7 +2646,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 2.99 } NOT = { check_variable = { which = dismantlement_formable value = 3.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }
@@ -2662,7 +2658,7 @@ country_event = { # Thing the player sees # this is about to get confusing af
 		any_country = { limit =  { check_variable = { which = dismantlement_formable value = 3.99 } NOT = { check_variable = { which = dismantlement_formable value = 4.99 } } } set_country_flag = current_dismantlement_formable }
 		CLN = { country_event = 20490 }
 		ai_chance = { 
-			factor = 0.5
+			factor = 1
 			modifier = { factor = 0 has_global_flag = dismantlement_debug }
 		}
     }

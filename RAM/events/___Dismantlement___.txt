@@ -11,7 +11,7 @@
 #################################################################
 
 country_event = { 
-    id = 20470
+    id = 20550
     title = "Selection Menu Setup"
     is_triggered_only = yes
 	
@@ -60,8 +60,8 @@ country_event = {
 
 		FROM = { 
 			set_country_flag = dismantlement_leader
-			set_variable = { which = dismantlement_currency value = 75 }
-			country_event = 20471
+			#set_variable = { which = dismantlement_currency value = 75 }
+			country_event = 20551
 		}
 	} 
 	
@@ -72,7 +72,7 @@ country_event = {
 }
 
 country_event = { 
-    id = 20471
+    id = 20551
     title = "Selection Menu"
 	picture  = "RAM/dismantlement_selection_menu"
     is_triggered_only = yes
@@ -350,7 +350,7 @@ country_event = { # Scope the cores to release
 			inherit = UTI
 		}
 
-		any_country = { limit = { has_country_flag = dismantlement_leader has_country_flag = literally_cheating } set_variable = { which = dismantlement_currency value = 200 } } 
+		#any_country = { limit = { has_country_flag = dismantlement_leader has_country_flag = literally_cheating } set_variable = { which = dismantlement_currency value = 200 } } 
 		CLN = { country_event = 20530 }
 		
 		# Designate Independent Targets
@@ -426,7 +426,7 @@ country_event = { # Scope the cores to release
 			#set_country_flag = dismantlement_targeting_short_buffer																																																							
 		}
 		
-		CLN = { country_event = 20452 }
+		CLN = { country_event = 20542 }
 		
 		# Check if target needs puppet option
 		any_country = {
@@ -506,7 +506,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40443	# No Formables, All Options
+									country_event = 20443	# No Formables, All Options
 								}
 							}
 						}
@@ -526,7 +526,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40442	# No Formables, All Options
+									country_event = 20442	# No Formables, All Options
 								}
 							}
 						}
@@ -555,7 +555,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40441	# This will be based on a variable
+									country_event = 20441	# This will be based on a variable
 								}
 							}
 						}
@@ -575,7 +575,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40440	# No Formables, All Options
+									country_event = 20440	# No Formables, All Options
 								}
 							}
 						}
@@ -600,7 +600,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40440	# This will be based on a variable
+									country_event = 20440	# This will be based on a variable
 								}
 							}
 						}
@@ -641,7 +641,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40453	# No Formables, All Options
+									country_event = 20453	# No Formables, All Options
 								}
 							}
 						}
@@ -661,7 +661,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40452	# No Formables, All Options
+									country_event = 20452	# No Formables, All Options
 								}
 							}
 						}
@@ -690,7 +690,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40451	# This will be based on a variable
+									country_event = 20451	# This will be based on a variable
 								}
 							}
 						}
@@ -710,7 +710,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40450	# No Formables, All Options
+									country_event = 20450	# No Formables, All Options
 								}
 							}
 						}
@@ -735,7 +735,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40450	# This will be based on a variable
+									country_event = 20450	# This will be based on a variable
 								}
 							}
 						}
@@ -776,7 +776,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40463	# No Formables, All Options
+									country_event = 20463	# No Formables, All Options
 								}
 							}
 						}
@@ -796,7 +796,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40462	# No Formables, All Options
+									country_event = 20462	# No Formables, All Options
 								}
 							}
 						}
@@ -825,7 +825,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40461	# This will be based on a variable
+									country_event = 20461	# This will be based on a variable
 								}
 							}
 						}
@@ -845,7 +845,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40460	# No Formables, All Options
+									country_event = 20460	# No Formables, All Options
 								}
 							}
 						}
@@ -870,7 +870,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40460	# This will be based on a variable
+									country_event = 20460	# This will be based on a variable
 								}
 							}
 						}
@@ -911,7 +911,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40473	# No Formables, All Options
+									country_event = 20473	# No Formables, All Options
 								}
 							}
 						}
@@ -931,7 +931,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40472	# No Formables, All Options
+									country_event = 20472	# No Formables, All Options
 								}
 							}
 						}
@@ -960,7 +960,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40471	# This will be based on a variable
+									country_event = 20471	# This will be based on a variable
 								}
 							}
 						}
@@ -980,7 +980,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40470	# No Formables, All Options
+									country_event = 20470	# No Formables, All Options
 								}
 							}
 						}
@@ -1005,7 +1005,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40470	# This will be based on a variable
+									country_event = 20470	# This will be based on a variable
 								}
 							}
 						}
@@ -1046,7 +1046,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40483	# No Formables, All Options
+									country_event = 20483	# No Formables, All Options
 								}
 							}
 						}
@@ -1066,7 +1066,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40482	# No Formables, All Options
+									country_event = 20482	# No Formables, All Options
 								}
 							}
 						}
@@ -1095,7 +1095,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40481	# This will be based on a variable
+									country_event = 20481	# This will be based on a variable
 								}
 							}
 						}
@@ -1115,7 +1115,7 @@ country_event = { # Scope the cores to release
 										NOT = { has_global_flag = dismantlement_targeting_final_buffer }
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40480	# No Formables, All Options
+									country_event = 20480	# No Formables, All Options
 								}
 							}
 						}
@@ -1139,7 +1139,7 @@ country_event = { # Scope the cores to release
 										has_global_flag = dismantlement_targeting_buffer 
 									}
 									set_global_flag = dismantlement_targeting_final_buffer
-									country_event = 40480	# This will be based on a variable
+									country_event = 20480	# This will be based on a variable
 								}
 							}
 						}
@@ -1887,7 +1887,7 @@ country_event = { #
     is_triggered_only = yes
 	
     immediate = {
-		any_country = { set_variable = { which = dismantlement_total_currency value = 0 } }
+		any_country = { set_variable = { which = dismantlement_currency value = 10 } }
 		UTI = { set_variable = { which = dynamic_loc value = 10 } }
 		any_country = {
 			limit = { 
@@ -1903,7 +1903,7 @@ country_event = { #
 				has_country_flag = dismantlement_leader 
 				mass_politics = 1
 			}
-			change_variable = { which = dismantlement_total_currency value = 1 }
+			change_variable = { which = dismantlement_currency value = 1 }
 			UTI = { change_variable = { which = dynamic_loc value = 1 } }
 			set_global_flag = green
 			slot_1 = { add_province_modifier = { name = dynamic_loc duration = -1 } }
@@ -1930,7 +1930,7 @@ country_event = { #
 				has_country_flag = dismantlement_leader 
 				is_mobilised = no
 			}
-			change_variable = { which = dismantlement_total_currency value = 2 }
+			change_variable = { which = dismantlement_currency value = 2 }
 			UTI = { change_variable = { which = dynamic_loc value = 2 } }
 			set_global_flag = green
 			slot_4 = { add_province_modifier = { name = dynamic_loc duration = -1 } }
@@ -1973,7 +1973,7 @@ country_event = { #
 				total_amount_of_ships = 100
 				NOT = { total_amount_of_ships = 200 }
 			}
-			change_variable = { which = dismantlement_total_currency value = 1 }
+			change_variable = { which = dismantlement_currency value = 1 }
 			UTI = { change_variable = { which = dynamic_loc value = 1 } }
 			set_global_flag = yellow
 			slot_9 = { add_province_modifier = { name = dynamic_loc duration = -1 } }
@@ -1987,7 +1987,7 @@ country_event = { #
 				total_amount_of_ships = 200
 				NOT = { total_amount_of_ships = 300 }
 			}
-			change_variable = { which = dismantlement_total_currency value = 2 }
+			change_variable = { which = dismantlement_currency value = 2 }
 			UTI = { change_variable = { which = dynamic_loc value = 2 } }
 			set_global_flag = yellow
 			slot_9 = { add_province_modifier = { name = dynamic_loc duration = -1 } }
@@ -2001,7 +2001,7 @@ country_event = { #
 				total_amount_of_ships = 300
 				NOT = { total_amount_of_ships = 400 }
 			}
-			change_variable = { which = dismantlement_total_currency value = 3 }
+			change_variable = { which = dismantlement_currency value = 3 }
 			UTI = { change_variable = { which = dynamic_loc value = 3 } }
 			set_global_flag = yellow
 			slot_9 = { add_province_modifier = { name = dynamic_loc duration = -1 } }
@@ -2015,7 +2015,7 @@ country_event = { #
 				total_amount_of_ships = 400
 				NOT = { total_amount_of_ships = 500 }
 			}
-			change_variable = { which = dismantlement_total_currency value = 4 }
+			change_variable = { which = dismantlement_currency value = 4 }
 			UTI = { change_variable = { which = dynamic_loc value = 4 } }
 			set_global_flag = yellow
 			slot_9 = { add_province_modifier = { name = dynamic_loc duration = -1 } }
@@ -2028,7 +2028,7 @@ country_event = { #
 				has_country_flag = dismantlement_leader 
 				total_amount_of_ships = 500
 			}
-			change_variable = { which = dismantlement_total_currency value = 5 }
+			change_variable = { which = dismantlement_currency value = 5 }
 			UTI = { change_variable = { which = dynamic_loc value = 5 } }
 			set_global_flag = green
 			slot_9 = { add_province_modifier = { name = dynamic_loc duration = -1 } }
@@ -2058,7 +2058,7 @@ country_event = { #
 				total_amount_of_divisions = 50
 				NOT = { total_amount_of_divisions = 100 }
 			}
-			change_variable = { which = dismantlement_total_currency value = 1 }
+			change_variable = { which = dismantlement_currency value = 1 }
 			UTI = { change_variable = { which = dynamic_loc value = 1 } }
 			set_global_flag = yellow
 			slot_12 = { add_province_modifier = { name = dynamic_loc duration = -1 } }
@@ -2072,7 +2072,7 @@ country_event = { #
 				total_amount_of_divisions = 100
 				NOT = { total_amount_of_divisions = 150 }
 			}
-			change_variable = { which = dismantlement_total_currency value = 2 }
+			change_variable = { which = dismantlement_currency value = 2 }
 			UTI = { change_variable = { which = dynamic_loc value = 2 } }
 			set_global_flag = yellow
 			slot_12 = { add_province_modifier = { name = dynamic_loc duration = -1 } }
@@ -2086,7 +2086,7 @@ country_event = { #
 				total_amount_of_divisions = 150
 				NOT = { total_amount_of_divisions = 200 }
 			}
-			change_variable = { which = dismantlement_total_currency value = 3 }
+			change_variable = { which = dismantlement_currency value = 3 }
 			UTI = { change_variable = { which = dynamic_loc value = 3 } }
 			set_global_flag = yellow
 			slot_12 = { add_province_modifier = { name = dynamic_loc duration = -1 } }
@@ -2100,7 +2100,7 @@ country_event = { #
 				total_amount_of_divisions = 200
 				NOT = { total_amount_of_divisions = 250 }
 			}
-			change_variable = { which = dismantlement_total_currency value = 4 }
+			change_variable = { which = dismantlement_currency value = 4 }
 			UTI = { change_variable = { which = dynamic_loc value = 4 } }
 			set_global_flag = yellow
 			slot_12 = { add_province_modifier = { name = dynamic_loc duration = -1 } }
@@ -2113,7 +2113,7 @@ country_event = { #
 				has_country_flag = dismantlement_leader 
 				total_amount_of_divisions = 250
 			}
-			change_variable = { which = dismantlement_total_currency value = 5 }
+			change_variable = { which = dismantlement_currency value = 5 }
 			UTI = { change_variable = { which = dynamic_loc value = 5 } }
 			set_global_flag = green
 			slot_12 = { add_province_modifier = { name = dynamic_loc duration = -1 } }
@@ -2143,7 +2143,7 @@ country_event = { #
 				money = 500000
 				NOT = { money = 1000000 }
 			}
-			change_variable = { which = dismantlement_total_currency value = 1 }
+			change_variable = { which = dismantlement_currency value = 1 }
 			UTI = { change_variable = { which = dynamic_loc value = 1 } }
 			set_global_flag = yellow
 			slot_12 = { add_province_modifier = { name = dynamic_loc duration = -1 } }
@@ -2157,7 +2157,7 @@ country_event = { #
 				money = 1000000
 				NOT = { money = 2000000 }
 			}
-			change_variable = { which = dismantlement_total_currency value = 2 }
+			change_variable = { which = dismantlement_currency value = 2 }
 			UTI = { change_variable = { which = dynamic_loc value = 2 } }
 			set_global_flag = yellow
 			slot_12 = { add_province_modifier = { name = dynamic_loc duration = -1 } }
@@ -2171,7 +2171,7 @@ country_event = { #
 				money = 2000000
 				NOT = { money = 3000000 }
 			}
-			change_variable = { which = dismantlement_total_currency value = 3 }
+			change_variable = { which = dismantlement_currency value = 3 }
 			UTI = { change_variable = { which = dynamic_loc value = 3 } }
 			set_global_flag = yellow
 			slot_12 = { add_province_modifier = { name = dynamic_loc duration = -1 } }
@@ -2185,7 +2185,7 @@ country_event = { #
 				money = 3000000
 				NOT = { money = 4000000 }
 			}
-			change_variable = { which = dismantlement_total_currency value = 4 }
+			change_variable = { which = dismantlement_currency value = 4 }
 			UTI = { change_variable = { which = dynamic_loc value = 4 } }
 			set_global_flag = yellow
 			slot_12 = { add_province_modifier = { name = dynamic_loc duration = -1 } }
@@ -2198,7 +2198,7 @@ country_event = { #
 				has_country_flag = dismantlement_leader 
 				money = 4000000
 			}
-			change_variable = { which = dismantlement_total_currency value = 5 }
+			change_variable = { which = dismantlement_currency value = 5 }
 			UTI = { change_variable = { which = dynamic_loc value = 5 } }
 			set_global_flag = green
 			slot_12 = { add_province_modifier = { name = dynamic_loc duration = -1 } }
@@ -2215,7 +2215,7 @@ country_event = { #
 				has_country_flag = dismantlement_leader 
 				has_country_flag = league_of_nations_mandate_dismantlement
 			}
-			change_variable = { which = dismantlement_total_currency value = 1 }
+			change_variable = { which = dismantlement_currency value = 1 }
 			UTI = { change_variable = { which = dynamic_loc value = 1 } }
 			set_global_flag = green
 			slot_15 = { add_province_modifier = { name = dynamic_loc duration = -1 } }
@@ -2245,7 +2245,7 @@ country_event = { #
 				has_country_flag = literally_cheating
 			}
 			UTI = { change_variable = { which = dynamic_loc value = 200 } }
-			change_variable = { which = dismantlement_total_currency value = 200 }
+			change_variable = { which = dismantlement_currency value = 200 }
 			CLN = { slot_40 = { secede_province = THIS state_scope = { change_region_name = "§GDebug Mode On|    §B200 §b/ §B0§!" } secede_province = QQQ } }
 		}
 		slot_39 = { add_province_modifier = { name = dynamic_loc duration = -1 } }

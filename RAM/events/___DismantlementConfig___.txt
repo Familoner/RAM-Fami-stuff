@@ -12,7 +12,7 @@
 #
 
 country_event = { # Prime Colonial Territory - forces historical colonies/borders
-    id = 20450
+    id = 20541
     title = "Assign Colonial Land"
     is_triggered_only = yes
 	
@@ -42,7 +42,7 @@ country_event = { # Prime Colonial Territory - forces historical colonies/border
 
 
 country_event = { # Dismantlement Formables	# Dynamic - You can add your own dismantlement formables	
-    id = 20452
+    id = 20542
     title = "Dismantlement Formables Tags"
     is_triggered_only = yes
 	
