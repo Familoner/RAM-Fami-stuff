@@ -17,21 +17,107 @@ country_event = { # Prime Colonial Territory - forces historical colonies/border
     is_triggered_only = yes
 	
 	immediate = {
-		any_land_province = {
-			limit = {
-				# Provinces
-				OR = {
-					provid = 1687
-					provid = 1686
-					provid = 3865
-					provid = 1688
+		# 
+		#								Colony of The Rif
+		#
+		random_country = {		
+			limit = { 
+				NOT = { has_global_flag = dismantlement_colony_buffer }																									
+			}																																		
+			any_country = {
+				limit = {
+					has_country_flag = dismantlement_targets
 				}
+				any_owned = {
+					limit = {
+
+						# Provinces
+						OR = {																																							
+							province_id = 1687
+							province_id = 1686
+							province_id = 3836
+							province_id = 1688
+						}
+
+					}
+					add_province_modifier = { name = dynamic_annex duration = -1 }
+
+					# Colonial Region Name
+					CLN = { slot_10 = { secede_province = THIS state_scope = { change_region_name = "The Rif" } secede_province = QQQ }	}												
+
+					# Colonies		
+					any_country = {
+						limit = {
+							OR = {
+								tag = MOR
+								tag = TUN
+								tag = POR
+								tag = ITA
+							}
+						}
+						set_country_flag = dismantlement_colony_target
+					}																																			
+
+					CLN = { set_global_flag = dismantlement_colony_buffer  }		
+				}															
 			}
-			add_province_modifier = { 
-				name = dismantlement_colony
-				duration = -1
+		}
+		# 
+		#								Colony of Morocco
+		#
+		random_country = {		
+			limit = { 
+				NOT = { has_global_flag = dismantlement_colony_buffer }																									
+			}																																		
+			any_country = {
+				limit = {
+					has_country_flag = dismantlement_targets
+				}
+				any_owned = {
+					limit = {
+
+						# Provinces
+						OR = {																																							
+							province_id = 1681
+							province_id = 1682
+							province_id = 1685
+							province_id = 3838
+							province_id = 1683
+							province_id = 1684
+							province_id = 1697
+							province_id = 1691
+							province_id = 1692
+							province_id = 2563
+							province_id = 1690
+							province_id = 1693
+							province_id = 1698
+							province_id = 3837
+							province_id = 1699
+							province_id = 1694
+							province_id = 3834
+						}
+
+					}
+					add_province_modifier = { name = dynamic_annex duration = -1 }
+
+					# Colonial Region Name
+					CLN = { slot_10 = { secede_province = THIS state_scope = { change_region_name = "Morocco" } secede_province = QQQ }	}												
+
+					# Colonies		
+					any_country = {
+						limit = {
+							tag = MOR
+							tag = TUN
+							tag = POR
+							tag = ITA
+						}
+						set_country_flag = dismantlement_colony_target
+					}			
+
+
+					CLN = { set_global_flag = dismantlement_colony_buffer  }	
+				}																	
 			}
-			# Need a keylist for this
 		}
 	}
 	

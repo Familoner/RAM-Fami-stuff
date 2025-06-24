@@ -441,7 +441,7 @@ country_event = { # Scope the cores to release
 		}
 
 		# If there are no valid targets left, end dismantlement
-		random_country = { limit = { NOT = { has_global_flag = dismantlement_targeting_buffer } } clr_global_flag = dismantlement_active }
+		random_country = { limit = { NOT = { has_global_flag = dismantlement_targeting_buffer } } clr_global_flag = dismantlement_active set_global_flag = dismantlement_active_2 }
 		
 		any_country = { limit = { has_country_flag = dismantlement_leader } set_country_flag = viewer }	
 		any_country = { limit = { has_country_flag = dismantlement_targeting_long_buffer } set_country_flag = dynamic_loc } slot_1 = { add_province_modifier = { name = dynamic_loc duration = -1 } } CLN = { country_event = 2 }																											# Who is being freed
@@ -2415,4 +2415,144 @@ country_event = { # Initial Dismantlement Event
 	option = {
         name = "Continue"
     }
+}
+
+
+country_event = { #
+    id = 20560
+    title = "Dismantlement Colony Bouncer"		
+    is_triggered_only = yes
+	
+    immediate = {
+		any_country = { set_variable = { which = colony_targets value = 0 } }
+		clr_global_flag = dismantlement_colony_buffer 
+		CLN = { country_event = 20541 }
+		random_country = { limit = { NOT = { has_global_flag = dismantlement_colony_buffer } } clr_global_flag = dismantlement_active_2 }
+		UTI = { set_variable = { which = iterator value = 1 } }
+		any_country = { limit = { has_country_flag = dismantlement_leader } set_country_flag = viewer }
+
+		any_country = {
+			limit = {
+				has_country_flag = dismantlement_colony_target
+			}
+			THIS = { 
+				any_country = { 
+					limit = {
+						has_country_flag = dismantlement_colony_target
+						NOT = { check_variable = { which = colony_targets value = 0.99 } }
+					}
+					THIS = { 
+						any_country = { 
+							limit = {
+								check_variable = { which = colony_targets value = 0.99 }
+							}
+							change_variable = { which = colony_targets value = 1 }
+						}
+					}
+					change_variable = { which = colony_targets value = 1 }
+					set_country_flag = dynamic_loc
+					CLN = {
+						country_event = 1
+						country_event = 4
+					}
+					UTI = { change_variable = { which = iterator value = 1 } }
+					set_country_flag = dynamic_loc
+					CLN = {
+						country_event = 1
+						country_event = 2
+					}
+					UTI = { change_variable = { which = iterator value = 1 } }
+				}
+				#random_country = {
+				#	limit = {
+				#		has_country_flag = dismantlement_colony_target
+				#		NOT = { check_variable = { which = colony_targets value = 0.99 } }
+				#	}
+				#	change_variable = { which = colony_targets value = 1 }
+				#}
+			}
+		}
+
+		any_country = { limit = { has_country_flag = dismantlement_leader } clr_country_flag = viewer }
+		any_country = {
+			limit = {
+				has_global_flag = dismantlement_active_2
+				has_country_flag = dismantlement_leader
+			}
+			country_event = 20570
+		}
+		
+	} 
+	
+	option = {
+        name = "Buffer it"
+    }
+	
+}
+
+country_event = { #
+    id = 20570
+    title = "Dismantlement Colony Player Event test"		
+    is_triggered_only = yes
+	
+    immediate = {
+		slot_1 = {}
+		slot_2 = {}
+		slot_3 = {}
+		slot_4 = {}
+		slot_5 = {}
+		slot_10 = {}
+	} 
+	
+	option = {
+        name = "Buffer it"
+		#any_country = { 
+		#	limit = { has_country_flag = dismantlement_colony_target } 
+		#	TUR = { set_country_flag = annexer }
+		#	clr_country_flag = dismantlement_colony_target
+		#	CLN = { country_event = 20580 }
+		#}
+		TUR = { set_country_flag = annexer }
+		CLN = { country_event = 20580 }
+    }
+	
+}
+
+country_event = { #
+    id = 20580
+    title = "Secede Flag based on Scope"		
+    is_triggered_only = yes
+	
+    immediate = {
+		any_country = {
+			limit = {
+				has_country_flag = annexer 
+			}
+			THIS = {
+				any_country = {
+					limit = {
+						has_country_flag = dismantlement_targets
+					}
+					any_owned = {
+						limit = {
+							has_province_modifier = dynamic_annex
+						}
+						secede_province = THIS add_core = UTI 
+					}
+				}
+			}
+			THIS = { release = UTI UTI = { annex_to = UTI all_core = { remove_core = UTI } } }
+			inherit = UTI
+			clr_country_flag = annexer
+		}
+		any_land_province = {
+			remove_province_modifier = dynamic_annex
+		}
+	} 
+	
+	option = {
+        name = "Buffer it"
+
+    }
+	
 }
