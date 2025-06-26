@@ -64,6 +64,7 @@ guiTypes = {
 		
 		
 	}
+	
 	guiButtonType = {
 		name = "Event_Country_OptionButton"
 		position = { x = 264 y = 536 }
